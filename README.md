@@ -1,5 +1,7 @@
 <div align="center">
 
+<img src="public/logo.png" width="280" alt="Syntra Logo" />
+
 # Syntra
 
 ### Synthetic Diligence Twins for Modern M&A
