@@ -1,0 +1,20 @@
+import { NextResponse } from "next/server";
+
+import { seedDemoReports } from "@/lib/demo/demo_backend";
+import { getReport } from "@/lib/reports";
+
+seedDemoReports();
+
+export async function GET(
+  _request: Request,
+  { params }: { params: Promise<{ id: string }> }
+) {
+  const { id } = await params;
+  const report = getReport(id);
+
+  if (!report) {
+    return NextResponse.json({ error: "Report not found." }, { status: 404 });
+  }
+
+  return NextResponse.json(report);
+}
