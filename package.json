@@ -1,12 +1,14 @@
 {
-  "name": "aegis-x",
+  "name": "syntra",
   "version": "0.1.0",
   "private": true,
   "scripts": {
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "eslint"
+    "lint": "eslint",
+    "demo:check": "node -e \"const s=require('./src/lib/demo/fixtures/stripe.json');const f=require('./src/lib/demo/fixtures/figma.json');const a=require('./src/lib/demo/fixtures/acme_batteries.json');console.log('✅ stripe.com —',s.status,'score',s.riskScores.overall);console.log('✅ figma.com —',f.status,'score',f.riskScores.overall);console.log('✅ acme-batteries.in —',a.status,'verdict',a.executiveSummary.data.verdict);console.log('\\nAll 3 fixtures valid. Demo mode ready.');\"",
+    "demo:dev": "SYNTRA_DEMO_MODE=true next dev"
   },
   "dependencies": {
     "next": "16.2.5",
