@@ -54,6 +54,16 @@ export async function POST(request: Request) {
         status: "completed",
       });
     }
+    // Non-fixture domain in demo mode — Linkup/AI calls are all intercepted,
+    // so running a real report would silently return dummy data. Block it.
+    return NextResponse.json(
+      {
+        error:
+          "SYNTRA_DEMO_MODE is active. Only stripe.com, figma.com, and acme-batteries.in are available in demo mode. " +
+          "Set SYNTRA_DEMO_MODE=false (or use `npm run dev`) to run live intelligence on any domain.",
+      },
+      { status: 422 }
+    );
   }
 
   const report = createReport(validation.domain);

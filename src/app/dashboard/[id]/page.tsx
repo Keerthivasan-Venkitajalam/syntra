@@ -134,28 +134,27 @@ function renderValue(k: string, value: unknown): React.ReactNode {
   if (value === null || value === undefined) return null;
   const label = k.replace(/([A-Z])/g, " $1").trim();
 
-  const sev: Record<string, string> = {
-    Critical: "color:var(--red);font-weight:600",
-    High: "color:var(--red)",
-    Medium: "color:var(--amber)",
-    Low: "color:var(--green)",
-    Strong: "color:var(--green);font-weight:600",
-    Moderate: "color:var(--amber)",
-    Weak: "color:#fb923c",
-    Leader: "color:var(--green);font-weight:600",
-    Visible: "color:var(--green)",
-    Hidden: "color:var(--red)",
-    Partial: "color:var(--amber)",
+  const sev: Record<string, React.CSSProperties> = {
+    Critical: { color: "var(--red)",   fontWeight: 600 },
+    High:     { color: "var(--red)" },
+    Medium:   { color: "var(--amber)" },
+    Low:      { color: "var(--green)" },
+    Strong:   { color: "var(--green)", fontWeight: 600 },
+    Moderate: { color: "var(--amber)" },
+    Weak:     { color: "#fb923c" },
+    Leader:   { color: "var(--green)", fontWeight: 600 },
+    Visible:  { color: "var(--green)" },
+    Hidden:   { color: "var(--red)" },
+    Partial:  { color: "var(--amber)" },
   };
 
   if (typeof value === "string") {
-    const colorStyle = sev[value] ?? "";
     return (
       <div key={k} style={{ gridColumn: "span 1" }}>
         <p style={{ fontFamily: "var(--t-mono)", fontSize: 10, letterSpacing: "0.1em", textTransform: "uppercase", color: "var(--muted)", marginBottom: 4 }}>
           {label}
         </p>
-        <p style={{ fontSize: 13, color: "var(--ink-2)", ...Object.fromEntries((colorStyle || "").split(";").filter(Boolean).map(s => s.split(":"))) }}>
+        <p style={{ fontSize: 13, color: "var(--ink-2)", ...(sev[value] ?? {}) }}>
           {value}
         </p>
       </div>
