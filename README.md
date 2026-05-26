@@ -19,6 +19,8 @@
 
 ### Built for the Linkup Async Hackathon — May 2026
 
+![Syntra Landing Page](public/screenshots/01-landing-hero.png)
+
 </div>
 
 ---
@@ -34,6 +36,8 @@ You drop a domain. Syntra fans out **ten parallel intelligence engines** through
 - **Fragmented to Twinned** — No more 47 open tabs. Every commercial, technical, ESG, regulatory, financial, and leadership signal lives in **one structured object** keyed to its source URL.
 - **Hallucinated to Cited** — Every claim in a Twin links back to a Linkup-retrieved source. There are no "trust me bro" sentences. If a span doesn't cite, it doesn't ship.
 - **Static to Diffable** — A Twin is JSON. You can diff today's Stripe Twin against yesterday's, alert on PLG signal regressions, and queue them through an API for downstream actuarial models.
+
+![Syntra Full Landing](public/screenshots/02-landing-full.png)
 
 ---
 
@@ -143,6 +147,12 @@ type EngineFn = (domain: string) => Promise<{
 
 This makes engines **independently testable**, **independently failable** (graceful degradation — three failed engines still ship a Twin), and **independently swappable** (any engine can be replaced without touching the orchestrator).
 
+<p align="center">
+  <img src="public/screenshots/03-dashboard-stripe.png" width="48%" alt="Stripe Twin Dashboard" />
+  <img src="public/screenshots/04-dashboard-figma.png" width="48%" alt="Figma Twin Dashboard" />
+</p>
+<p align="center"><em>Two Buy-verdict Twins: Stripe (82/100) and Figma (76/100) — risk radar, executive summary, and all 10 engines rendered live.</em></p>
+
 ---
 
 ## Tech Stack
@@ -196,6 +206,9 @@ Each engine is an isolated worker that queries Linkup, sanitizes the result, cal
 
 The eleventh "engine," the **Executive Summary**, runs *after* the ten finish — it ingests their aggregate output, computes a composite risk score across seven dimensions, and produces a **Buy / Hold / Pass** verdict with thesis, strengths, and risks.
 
+![Stripe Share Page](public/screenshots/07-share-stripe.png)
+<p align="center"><em>The public share view for stripe.com — every engine's output, sources, and PDF citations in a shareable read-only URL.</em></p>
+
 ---
 
 ## Demo Mode & Easter Eggs
@@ -226,6 +239,12 @@ Triggered through the client-side `DemoOrchestrator` (or via the hidden landing-
 | 8 | `resetAll()` | Clears every scripted overlay back to a clean slate |
 
 Each scenario is **deterministic, replayable, and offline-safe** — exactly what a hackathon judging panel or a sales demo demands.
+
+<p align="center">
+  <img src="public/screenshots/06-compare.png" width="55%" alt="Twin Comparison — Stripe vs Figma" />
+  <img src="public/screenshots/10-acme-pass.png" width="41%" alt="Acme Batteries — Pass Verdict" />
+</p>
+<p align="center"><em>Left: Two-Twin field-level diff (Stripe 82 vs Figma 76). Right: Acme Batteries flagged Pass (28/100) — Udyam mismatch, MCA fraud signals.</em></p>
 
 ---
 
@@ -288,6 +307,9 @@ Each scenario is **deterministic, replayable, and offline-safe** — exactly wha
    npm run demo:check     # verify all three fixtures load
    npm run demo:dev       # boot with SYNTRA_DEMO_MODE=true
    ```
+
+![Reports History](public/screenshots/08-reports-index.png)
+<p align="center"><em>Report History — every Twin in the current session with risk score, verdict, engine count, and source count.</em></p>
 
 ---
 
@@ -456,6 +478,25 @@ npm start
 ```
 
 The production server respects `PORT` (default `3000`) and works behind any reverse proxy.
+
+---
+
+## Gallery
+
+<p align="center">
+  <img src="public/screenshots/03-dashboard-stripe.png" width="49%" alt="Stripe.com Twin — Full Dashboard" />
+  <img src="public/screenshots/05-dashboard-acme.png" width="49%" alt="Acme Batteries — Full Dashboard" />
+</p>
+
+<p align="center">
+  <img src="public/screenshots/04-dashboard-figma.png" width="49%" alt="Figma.com Twin — Full Dashboard" />
+  <img src="public/screenshots/07-share-stripe.png" width="49%" alt="Stripe.com — Public Share View" />
+</p>
+
+<p align="center">
+  <img src="public/screenshots/08-reports-index.png" width="49%" alt="Report History" />
+  <img src="public/screenshots/06-compare.png" width="49%" alt="Two-Twin Comparison" />
+</p>
 
 ---
 

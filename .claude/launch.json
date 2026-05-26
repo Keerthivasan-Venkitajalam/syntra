@@ -1,0 +1,11 @@
+{
+  "version": "0.0.1",
+  "configurations": [
+    {
+      "name": "syntra-demo",
+      "runtimeExecutable": "npm",
+      "runtimeArgs": ["run", "demo:dev"],
+      "port": 3000
+    }
+  ]
+}
