@@ -1,0 +1,418 @@
+{
+  "id": "demo-stripe",
+  "domain": "stripe.com",
+  "status": "completed",
+  "createdAt": "2026-05-15T10:00:00.000Z",
+  "updatedAt": "2026-05-15T10:02:30.000Z",
+  "riskScores": {
+    "overall": 82,
+    "commercial": 88,
+    "technical": 85,
+    "esg": 52,
+    "regulatory": 65,
+    "competitive": 80,
+    "financial": 90,
+    "leadership": 85
+  },
+  "teaser": {
+    "status": "completed",
+    "data": {
+      "summary": "Stripe is a global financial infrastructure platform processing hundreds of billions in annual payment volume. The company operates a dominant PLG motion with self-serve onboarding, transparent pricing, and an API-first approach that has made it the default payment stack for startups and enterprises alike. Recent expansion into banking-as-a-service, tax automation, and climate initiatives signals a platform play beyond payments.",
+      "plgOrSlg": "PLG",
+      "techSignals": [
+        "API-first architecture with 250+ integrations",
+        "Ruby + Java backend with React frontend",
+        "AWS-hosted global infrastructure",
+        "Machine learning fraud detection (Radar)",
+        "Real-time data pipeline processing billions of events"
+      ]
+    },
+    "sources": [
+      "https://stripe.com",
+      "https://stripe.com/pricing",
+      "https://stripe.com/jobs",
+      "https://stripe.com/blog/engineering",
+      "https://stackshare.io/stripe/stripe"
+    ]
+  },
+  "engines": {
+    "commercial": {
+      "status": "completed",
+      "data": {
+        "plgSignals": [
+          "Self-serve signup with no credit card required",
+          "Transparent per-transaction pricing (2.9% + 30c)",
+          "Free sandbox/test mode with full API access",
+          "Interactive API documentation with live examples",
+          "Community-driven developer ecosystem"
+        ],
+        "slgSignals": [
+          "Enterprise 'Contact Sales' for custom pricing",
+          "Dedicated account management for high-volume",
+          "Custom contract terms for large enterprises"
+        ],
+        "pricingVisibility": "Visible",
+        "signupFlow": "Self-serve",
+        "freeTrial": "Yes",
+        "pricingTiers": [
+          "Integrated: 2.9% + 30c per transaction",
+          "Customized: Volume discounts for enterprises",
+          "Stripe Atlas: $500 one-time for incorporation"
+        ],
+        "notes": "Classic PLG-dominant hybrid with enterprise motion for high-volume accounts."
+      },
+      "sources": [
+        "https://stripe.com/pricing",
+        "https://stripe.com/signup",
+        "https://stripe.com/contact/sales"
+      ]
+    },
+    "technical": {
+      "status": "completed",
+      "data": {
+        "languages": [
+          "Ruby",
+          "Java",
+          "JavaScript/TypeScript",
+          "Python",
+          "Go",
+          "Scala"
+        ],
+        "cloud": [
+          "AWS"
+        ],
+        "databases": [
+          "PostgreSQL",
+          "Redis",
+          "Elasticsearch",
+          "MongoDB"
+        ],
+        "vendors": [
+          "AWS",
+          "Cloudflare",
+          "PagerDuty",
+          "Datadog",
+          "GitHub"
+        ],
+        "openSource": "Partial",
+        "techDebtSignals": [
+          "Active migration from monolith to microservices noted in engineering blog"
+        ],
+        "notes": "Mature engineering org with 2000+ engineers. Strong open-source presence."
+      },
+      "sources": [
+        "https://stripe.com/blog/engineering",
+        "https://stackshare.io/stripe/stripe",
+        "https://stripe.com/jobs"
+      ]
+    },
+    "esg": {
+      "status": "completed",
+      "data": {
+        "sustainabilityReport": "Stripe Climate initiative launched 2020",
+        "deiInitiatives": [
+          "Annual diversity report published",
+          "Employee resource groups",
+          "Partnerships with coding bootcamps"
+        ],
+        "supplierRisks": [
+          "Heavy AWS dependency for infrastructure",
+          "Carbon removal purchase commitments via Stripe Climate"
+        ],
+        "esgRating": null,
+        "notes": "Stripe Climate is a notable ESG differentiator. No formal Scope emissions reporting."
+      },
+      "sources": [
+        "https://stripe.com/files/reports/climate-impact-2024.pdf",
+        "https://climate.stripe.com",
+        "https://stripe.com/climate"
+      ],
+      "pdfSources": [
+        {
+          "url": "https://stripe.com/files/reports/climate-impact-2024.pdf",
+          "title": "Stripe Climate Impact Report 2024",
+          "fetched": true
+        }
+      ]
+    },
+    "aiAct": {
+      "status": "completed",
+      "data": {
+        "aiFeatures": [
+          "Stripe Radar: ML-based fraud detection",
+          "Adaptive acceptance: ML-optimized payment routing",
+          "Revenue recognition automation",
+          "Billing usage predictions"
+        ],
+        "governanceSignals": [
+          "Privacy center with AI data usage disclosure",
+          "GDPR and PCI-DSS compliance documentation",
+          "SOC 1 & SOC 2 Type II certified"
+        ],
+        "riskTier": "High",
+        "missingDisclosures": [
+          "No public bias testing results for fraud models",
+          "No explainability documentation for ML decisions",
+          "No formal EU AI Act compliance statement"
+        ],
+        "notes": "High risk tier due to ML-based automated financial decision-making."
+      },
+      "sources": [
+        "https://stripe.com/radar",
+        "https://stripe.com/privacy"
+      ]
+    },
+    "competitors": {
+      "status": "completed",
+      "data": {
+        "directCompetitors": [
+          {
+            "name": "Adyen",
+            "description": "Enterprise-focused payment platform, strong in Europe.",
+            "threat": "High"
+          },
+          {
+            "name": "Square (Block)",
+            "description": "Omnichannel payments with POS hardware.",
+            "threat": "Medium"
+          },
+          {
+            "name": "PayPal/Braintree",
+            "description": "Consumer-facing payments with merchant tools.",
+            "threat": "Medium"
+          }
+        ],
+        "indirectCompetitors": [
+          "Plaid",
+          "Shopify Payments",
+          "Checkout.com",
+          "Wise"
+        ],
+        "marketPosition": "Leader",
+        "differentiators": [
+          "Best-in-class developer experience and API design",
+          "Full-stack financial infrastructure (payments + banking + tax)",
+          "Platform/marketplace payment facilitation (Connect)",
+          "Global availability in 46+ countries",
+          "Startup ecosystem lock-in via Atlas incorporation"
+        ],
+        "moatStrength": "Strong",
+        "notes": "Strongest developer moat in fintech. Network effects create high switching costs."
+      },
+      "sources": [
+        "https://stripe.com/payments",
+        "https://stripe.com/connect"
+      ]
+    },
+    "redFlags": {
+      "status": "completed",
+      "data": {
+        "dealBreakers": [],
+        "warnings": [
+          "Private company \u2014 limited financial transparency",
+          "Valuation cut from $95B to $50B in 2023 (recovered since)",
+          "High dependency on a single cloud provider (AWS)"
+        ],
+        "lawsuits": [
+          "Minor patent disputes in payment processing (common in fintech)"
+        ],
+        "dataBreaches": [
+          "No publicly reported major data breaches"
+        ],
+        "layoffs": "14% workforce reduction in November 2022 (~1,100 employees)",
+        "regulatoryActions": [
+          "Under regulatory scrutiny for money transmission licensing"
+        ],
+        "overallSeverity": "Low",
+        "notes": "No deal-breakers identified. Overall risk profile is favorable."
+      },
+      "sources": [
+        "https://stripe.com/newsroom"
+      ],
+      "deepResearch": true
+    },
+    "financial": {
+      "status": "completed",
+      "data": {
+        "fundingRounds": [
+          {
+            "round": "Series A",
+            "amount": "$18M",
+            "date": "2012",
+            "investors": "Sequoia, a16z"
+          },
+          {
+            "round": "Series G",
+            "amount": "$600M",
+            "date": "2020",
+            "investors": "a16z, Sequoia, GIC"
+          },
+          {
+            "round": "Series I",
+            "amount": "$6.5B",
+            "date": "2023",
+            "investors": "a16z, Baillie Gifford, Founders Fund, Goldman"
+          }
+        ],
+        "totalFunding": "$8.7B+",
+        "latestValuation": "$65B (2023)",
+        "revenueEstimate": "$16.5B+ gross revenue (2023), ~$3.5B net revenue",
+        "growthRate": "~25% YoY",
+        "profitability": "Profitable",
+        "ipoStatus": "Private",
+        "notes": "One of the most valuable private companies globally. Profitable since 2023. IPO widely expected."
+      },
+      "sources": [
+        "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=stripe",
+        "https://stripe.com/newsroom",
+        "https://www.crunchbase.com/organization/stripe"
+      ],
+      "pdfSources": [
+        {
+          "url": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=stripe",
+          "title": "Stripe FY2024 10-K (filed 2025)",
+          "fetched": true
+        }
+      ]
+    },
+    "leadership": {
+      "status": "completed",
+      "data": {
+        "keyExecutives": [
+          {
+            "name": "Patrick Collison",
+            "title": "CEO & Co-founder",
+            "background": "Founded Stripe at 21. Forbes 30 Under 30."
+          },
+          {
+            "name": "John Collison",
+            "title": "President & Co-founder",
+            "background": "Youngest self-made billionaire. Oversees revenue and GTM."
+          },
+          {
+            "name": "David Singleton",
+            "title": "CTO",
+            "background": "Former VP Engineering at Google (Android, Maps, Wear OS)."
+          },
+          {
+            "name": "Steffan Tomlinson",
+            "title": "CFO",
+            "background": "Former CFO at Palo Alto Networks."
+          }
+        ],
+        "founderLed": "Yes",
+        "teamSize": "~8,000 employees",
+        "glassdoorRating": "4.2/5",
+        "cultureSignals": [
+          "Strong writing culture \u2014 internal memos and RFCs",
+          "Remote-first since 2020 with global engineering hubs",
+          "High bar hiring process"
+        ],
+        "hiringVelocity": "Growing",
+        "keyPersonRisk": "Medium",
+        "notes": "Exceptional founder-led team with world-class CTO hire from Google."
+      },
+      "sources": [
+        "https://stripe.com/about",
+        "https://www.glassdoor.com"
+      ]
+    },
+    "marketSizing": {
+      "status": "completed",
+      "data": {
+        "industry": "Digital Payments & Financial Infrastructure",
+        "tam": "$150T global payments volume / ~$2.5T payment processing revenue",
+        "sam": "$500B+ online payment processing market (2025)",
+        "som": "$50B+ addressable by API-first platforms",
+        "cagr": "~11% CAGR for digital payments (2024-2030)",
+        "marketTrends": [
+          "Shift from cash to digital payments accelerating globally",
+          "Embedded finance becoming standard in SaaS platforms",
+          "Cross-border payments growing at 2x domestic rate",
+          "AI-driven fraud detection becoming table stakes"
+        ],
+        "tailwinds": [
+          "E-commerce penetration still growing (25% of retail)",
+          "Creator economy and platform marketplaces expanding",
+          "Banking-as-a-service enabling new fintech models"
+        ],
+        "headwinds": [
+          "Regulatory fragmentation across jurisdictions",
+          "Increasing competition driving margin compression",
+          "Central bank digital currencies could disintermediate"
+        ],
+        "notes": "Massive and growing TAM with strong secular tailwinds."
+      },
+      "sources": [
+        "https://www.mckinsey.com/industries/financial-services",
+        "https://stripe.com/reports"
+      ]
+    },
+    "annualReport": {
+      "status": "completed",
+      "data": {
+        "documentTitle": "Stripe Annual Report 2024",
+        "documentUrl": "https://stripe.com/files/reports/stripe-annual-report-2024.pdf",
+        "revenue": "$16.5B gross revenue (FY2024)",
+        "netIncome": "First full year of profitability achieved",
+        "totalAssets": null,
+        "keyRisks": [
+          "Regulatory fragmentation across 46+ countries",
+          "Single-cloud dependency on AWS infrastructure",
+          "Increasing interchange fee pressure from card networks",
+          "Competition from Adyen, Braintree, and bank-native solutions"
+        ],
+        "keyOpportunities": [
+          "Stripe Capital: $8B+ in business loans originated",
+          "Stripe Tax: automation across 40+ countries",
+          "Stripe Climate: $20M+ in climate contributions facilitated",
+          "Embedded finance expansion via Stripe Treasury"
+        ],
+        "auditOpinion": "Unqualified",
+        "fiscalYear": "FY2024",
+        "highlights": [
+          "$1T+ total payment volume processed in 2024",
+          "Profitability achieved for first time",
+          "$65B valuation \u2014 no imminent IPO planned",
+          "245M+ businesses powered globally",
+          "99.999% uptime SLA maintained",
+          "Expanded to 46 countries with local acquiring"
+        ]
+      },
+      "sources": [
+        "https://stripe.com/files/reports/stripe-annual-report-2024.pdf"
+      ],
+      "pdfSources": [
+        {
+          "url": "https://stripe.com/files/reports/stripe-annual-report-2024.pdf",
+          "title": "Stripe Annual Report 2024",
+          "fetched": true
+        }
+      ],
+      "deepResearch": false
+    }
+  },
+  "executiveSummary": {
+    "status": "completed",
+    "data": {
+      "verdict": "Buy",
+      "investmentThesis": "Stripe represents a generational platform opportunity in financial infrastructure. The company has built the strongest developer moat in fintech with an API-first approach, and is now expanding into banking-as-a-service, tax automation, and climate tech. With $16.5B+ gross revenue, profitability achieved, and a $65B valuation, the risk-reward profile is compelling for a company with massive TAM runway.",
+      "keyStrengths": [
+        "Market-leading developer experience creating exceptional switching costs",
+        "Platform network effects through Connect marketplace payments",
+        "Profitable with $16.5B+ gross revenue and 25% YoY growth",
+        "Exceptional founder-led team with world-class CTO from Google",
+        "$150T+ TAM with strong secular tailwinds in digital payments"
+      ],
+      "keyRisks": [
+        "Private company with limited financial transparency pre-IPO",
+        "High-risk AI Act exposure for ML-based fraud decisions",
+        "Single cloud provider dependency (AWS) creates concentration risk",
+        "Enterprise competition from Adyen accelerating in Europe",
+        "Regulatory fragmentation across 46+ operating countries"
+      ],
+      "recommendation": "Strong Buy with monitoring on EU AI Act compliance and Adyen competition. The developer moat, platform network effects, and proven profitability justify premium valuation. Position for IPO upside."
+    },
+    "sources": []
+  }
+}

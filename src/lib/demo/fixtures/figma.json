@@ -1,0 +1,403 @@
+{
+  "id": "demo-figma",
+  "domain": "figma.com",
+  "status": "completed",
+  "createdAt": "2026-05-15T10:00:00.000Z",
+  "updatedAt": "2026-05-15T10:02:15.000Z",
+  "riskScores": {
+    "overall": 76,
+    "commercial": 81,
+    "technical": 80,
+    "esg": 62,
+    "regulatory": 68,
+    "competitive": 70,
+    "financial": 74,
+    "leadership": 80
+  },
+  "teaser": {
+    "status": "completed",
+    "data": {
+      "summary": "Figma is the dominant browser-native design collaboration platform used by over 4 million designers globally. Its multiplayer architecture and component library ecosystem have made it the operating system of product design. After a failed $20B Adobe acquisition blocked by global regulators in 2023, Figma returned to independence and has since accelerated its AI roadmap with generative layout, variable font, and AI-assisted prototyping features.",
+      "plgOrSlg": "PLG",
+      "techSignals": [
+        "Browser-native via WebAssembly + WebGL rendering engine",
+        "React + custom C++ runtime for canvas performance",
+        "Electron-based desktop app for offline support",
+        "WebSocket multiplayer collaboration at scale",
+        "Plugin ecosystem with 2,000+ community plugins"
+      ]
+    },
+    "sources": [
+      "https://figma.com",
+      "https://figma.com/pricing",
+      "https://figma.com/blog/figma-ai",
+      "https://www.figma.com/developer-platform",
+      "https://stackshare.io/figma/figma"
+    ]
+  },
+  "engines": {
+    "commercial": {
+      "status": "completed",
+      "data": {
+        "plgSignals": [
+          "Free Starter tier: 3 Figma files, unlimited collaborators",
+          "No credit card required for free tier signup",
+          "Public community files and templates drive viral growth",
+          "Plugin marketplace creates ecosystem lock-in",
+          "FigJam (whiteboard) free for education"
+        ],
+        "slgSignals": [
+          "Enterprise plan with SAML SSO and advanced security",
+          "Custom pricing for 50+ seat organizations",
+          "Dedicated CSM for Enterprise customers"
+        ],
+        "pricingVisibility": "Visible",
+        "signupFlow": "Self-serve",
+        "freeTrial": "Yes",
+        "pricingTiers": [
+          "Starter: Free (3 Figma files, 3 FigJam files)",
+          "Professional: $12/editor/month (billed annually)",
+          "Organization: $45/editor/month",
+          "Enterprise: Custom pricing"
+        ],
+        "notes": "Textbook PLG motion. Free tier drives viral adoption; upgrade path is frictionless."
+      },
+      "sources": [
+        "https://figma.com/pricing",
+        "https://figma.com/enterprise",
+        "https://figma.com/education"
+      ]
+    },
+    "technical": {
+      "status": "completed",
+      "data": {
+        "languages": [
+          "TypeScript",
+          "C++",
+          "Rust",
+          "Python"
+        ],
+        "cloud": [
+          "AWS",
+          "GCP"
+        ],
+        "databases": [
+          "PostgreSQL",
+          "Redis",
+          "CockroachDB"
+        ],
+        "vendors": [
+          "AWS",
+          "Cloudflare",
+          "Vercel",
+          "Datadog",
+          "LaunchDarkly"
+        ],
+        "openSource": "Partial",
+        "techDebtSignals": [
+          "Core rendering engine built in C++ pre-WASM era \u2014 incremental rewrites ongoing",
+          "Electron desktop app adds maintenance surface"
+        ],
+        "notes": "Engineering org of ~800 engineers. Best-in-class browser rendering engine. WASM compilation pipeline is a genuine technical moat."
+      },
+      "sources": [
+        "https://figma.com/blog/introducing-figmas-platform",
+        "https://stackshare.io/figma/figma",
+        "https://figma.com/careers"
+      ]
+    },
+    "esg": {
+      "status": "completed",
+      "data": {
+        "sustainabilityReport": "2023 Impact Report published \u2014 carbon neutral for Scope 1+2",
+        "deiInitiatives": [
+          "Design diversity reports published annually",
+          "Figma Fund: $10M for emerging designers globally",
+          "Sponsoring under-represented designers at Config conference"
+        ],
+        "supplierRisks": [
+          "AWS and GCP dual-cloud reduces single-vendor ESG dependency"
+        ],
+        "esgRating": "B (self-assessed)",
+        "notes": "Above-average ESG posture for a company of this size. Figma Fund is a meaningful external ESG initiative."
+      },
+      "sources": [
+        "https://figma.com/about",
+        "https://figma.com/impact"
+      ]
+    },
+    "aiAct": {
+      "status": "completed",
+      "data": {
+        "aiFeatures": [
+          "Figma AI: generative UI layout from text prompts",
+          "Auto-rename layers via ML",
+          "Content-fill with AI for placeholder data",
+          "AI-assisted component search and matching",
+          "Dev Mode AI: auto-generated code from design specs"
+        ],
+        "governanceSignals": [
+          "AI data usage policy published",
+          "Opt-out for AI training on customer designs",
+          "SOC 2 Type II certified"
+        ],
+        "riskTier": "Medium",
+        "missingDisclosures": [
+          "No bias testing documentation for generative UI models",
+          "No EU AI Act self-assessment publicly available"
+        ],
+        "notes": "Medium risk. AI features are creative/assistive, not automated high-stakes decisions. GDPR compliance robust."
+      },
+      "sources": [
+        "https://figma.com/ai",
+        "https://figma.com/legal/privacy"
+      ]
+    },
+    "competitors": {
+      "status": "completed",
+      "data": {
+        "directCompetitors": [
+          {
+            "name": "Adobe XD",
+            "description": "Abandoned in 2023 post Figma acquisition attempt failure. Market share declining.",
+            "threat": "Low"
+          },
+          {
+            "name": "Framer",
+            "description": "Design + code platform targeting AI-native design. Growing rapidly.",
+            "threat": "Medium"
+          },
+          {
+            "name": "Canva",
+            "description": "Consumer-grade design, expanding into professional UI tools.",
+            "threat": "Medium"
+          }
+        ],
+        "indirectCompetitors": [
+          "Sketch",
+          "Penpot (open source)",
+          "Webflow",
+          "Miro"
+        ],
+        "marketPosition": "Leader",
+        "differentiators": [
+          "Browser-native: no installation, real-time multiplayer",
+          "Component library ecosystem \u2014 industry standard",
+          "Dev Mode: design-to-code handoff",
+          "Plugin ecosystem with 2,000+ integrations",
+          "Survived Adobe acquisition attempt \u2014 now deeply entrenched"
+        ],
+        "moatStrength": "Strong",
+        "notes": "Category creator and dominant incumbent. Adobe's failed acquisition attempt paradoxically strengthened Figma's independent brand."
+      },
+      "sources": [
+        "https://figma.com/community",
+        "https://figma.com/dev-mode"
+      ]
+    },
+    "redFlags": {
+      "status": "completed",
+      "data": {
+        "dealBreakers": [],
+        "warnings": [
+          "Adobe acquisition at $20B blocked by EU, UK, DOJ regulators \u2014 ongoing legal costs",
+          "Break-up fee of $1B paid by Adobe \u2014 received by Figma",
+          "Private company \u2014 limited financial transparency"
+        ],
+        "lawsuits": [
+          "CMA (UK) regulatory review \u2014 concluded (no ongoing action)",
+          "IP claim from Adobe regarding design tool patents \u2014 settled"
+        ],
+        "dataBreaches": [
+          "No publicly reported data breaches"
+        ],
+        "layoffs": "No significant layoffs. Headcount growing post-Adobe deal collapse.",
+        "regulatoryActions": [
+          "None active"
+        ],
+        "overallSeverity": "Low",
+        "notes": "Clean bill of health post-Adobe. The $1B break-up fee provides a war chest for AI investment."
+      },
+      "sources": [
+        "https://figma.com/blog/figma-adobe-abandoned",
+        "https://www.bloomberg.com"
+      ],
+      "deepResearch": true
+    },
+    "financial": {
+      "status": "completed",
+      "data": {
+        "fundingRounds": [
+          {
+            "round": "Series A",
+            "amount": "$14M",
+            "date": "2015",
+            "investors": "Index Ventures, Greylock"
+          },
+          {
+            "round": "Series D",
+            "amount": "$50M",
+            "date": "2019",
+            "investors": "Andreessen Horowitz, Sequoia, Kleiner Perkins"
+          },
+          {
+            "round": "Series E",
+            "amount": "$200M",
+            "date": "2021",
+            "investors": "Morgan Stanley, Durable Capital"
+          }
+        ],
+        "totalFunding": "$333M",
+        "latestValuation": "$10B (2021 last primary; $20B implied by Adobe offer)",
+        "revenueEstimate": "~$600M ARR (2024 estimate)",
+        "growthRate": "~40% YoY ARR growth",
+        "profitability": "Near profitable",
+        "ipoStatus": "IPO expected 2025\u20132026",
+        "notes": "$1B Adobe break-up fee provides significant runway. IPO widely anticipated."
+      },
+      "sources": [
+        "https://investors.figma.com/docs/s1-draft.pdf",
+        "https://figma.com/blog",
+        "https://www.crunchbase.com/organization/figma"
+      ],
+      "pdfSources": [
+        {
+          "url": "https://investors.figma.com/docs/s1-draft.pdf",
+          "title": "Figma S-1 filing draft (post-Adobe-block)",
+          "fetched": true
+        }
+      ]
+    },
+    "leadership": {
+      "status": "completed",
+      "data": {
+        "keyExecutives": [
+          {
+            "name": "Dylan Field",
+            "title": "CEO & Co-founder",
+            "background": "Dropped out of Brown University. Former intern at LinkedIn, Flipboard. Founded Figma at 20."
+          },
+          {
+            "name": "Kris Rasmussen",
+            "title": "CTO",
+            "background": "Former Principal Engineer at Figma. Promoted to CTO after Evan Wallace's departure."
+          },
+          {
+            "name": "Amanda Kleha",
+            "title": "Chief Customer Officer",
+            "background": "Former Chief Revenue Officer. Key architect of the Enterprise motion."
+          }
+        ],
+        "founderLed": "Yes",
+        "teamSize": "~1,400 employees",
+        "glassdoorRating": "4.5/5",
+        "cultureSignals": [
+          "Flat org structure with strong design culture",
+          "Famous for Config annual user conference",
+          "Remote-friendly with SF headquarters",
+          "High Glassdoor score \u2014 strong employer brand"
+        ],
+        "hiringVelocity": "Growing",
+        "keyPersonRisk": "Medium",
+        "notes": "Dylan Field is a strong founder with a clear product vision. Kris Rasmussen's CTO transition is recent \u2014 execution risk to watch."
+      },
+      "sources": [
+        "https://figma.com/about",
+        "https://www.glassdoor.com"
+      ]
+    },
+    "marketSizing": {
+      "status": "completed",
+      "data": {
+        "industry": "Design Software & Collaboration Tools",
+        "tam": "$13B global design tools market (2024)",
+        "sam": "$6B professional product design software",
+        "som": "$2.5B browser-native design platforms",
+        "cagr": "~15% CAGR for design collaboration tools (2024-2030)",
+        "marketTrends": [
+          "AI-native design tooling becoming table stakes",
+          "Design-to-code automation reducing handoff friction",
+          "Embedded design systems in product organizations growing",
+          "FigJam competing with Miro in enterprise whiteboarding"
+        ],
+        "tailwinds": [
+          "Every company becoming a software company",
+          "Remote work making real-time collaboration essential",
+          "Developer tooling and design tooling converging"
+        ],
+        "headwinds": [
+          "Framer and AI-native tools threatening bottom of market",
+          "Canva expanding upmarket aggressively",
+          "Enterprise procurement consolidation may favor Microsoft/Adobe"
+        ],
+        "notes": "Figma owns the category it created. The risk is disruption from AI-first design tools, not from legacy incumbents."
+      },
+      "sources": [
+        "https://figma.com/reports",
+        "https://www.gartner.com"
+      ]
+    },
+    "annualReport": {
+      "status": "completed",
+      "data": {
+        "documentTitle": "Figma FY2024 Annual Report",
+        "documentUrl": "https://investors.figma.com/docs/figma-2024-annual-report.pdf",
+        "revenue": "$749M ARR (FY2024)",
+        "netIncome": null,
+        "totalAssets": null,
+        "keyRisks": [
+          "Adobe acquisition blocked by EU regulators \u2014 refocus required",
+          "Revenue concentration in design teams may slow enterprise expansion",
+          "AI-native design tools from competitors threatening core TAM"
+        ],
+        "keyOpportunities": [
+          "FigJam whiteboarding expanding into project management",
+          "Dev Mode bridging design-to-code gap",
+          "Config developer conference driving platform ecosystem"
+        ],
+        "auditOpinion": null,
+        "fiscalYear": "FY2024",
+        "highlights": [
+          "$749M ARR with strong NRR above 130%",
+          "4M+ active users across 190 countries",
+          "Post-Adobe-block IPO path being evaluated",
+          "Figma AI launched with generative design features"
+        ]
+      },
+      "sources": [
+        "https://investors.figma.com/docs/figma-2024-annual-report.pdf"
+      ],
+      "pdfSources": [
+        {
+          "url": "https://investors.figma.com/docs/figma-2024-annual-report.pdf",
+          "title": "Figma FY2024 Annual Report",
+          "fetched": true
+        }
+      ],
+      "deepResearch": false
+    }
+  },
+  "executiveSummary": {
+    "status": "completed",
+    "data": {
+      "verdict": "Buy",
+      "investmentThesis": "Figma is the dominant design operating system for product teams globally. The $1B Adobe break-up fee, a clean balance sheet, and an accelerating AI roadmap create a compelling entry point. The company has survived the ultimate stress test \u2014 a hostile acquisition attempt by the largest design software company in the world \u2014 and emerged with stronger brand equity. IPO upside is significant.",
+      "keyStrengths": [
+        "Category creator and dominant incumbent in product design tooling",
+        "$1B Adobe break-up fee \u2014 significant war chest for AI R&D",
+        "Browser-native WASM architecture is a genuine technical moat",
+        "Plugin ecosystem creates deep platform lock-in",
+        "High NPS (70+) and 4.5/5 Glassdoor \u2014 exceptional culture"
+      ],
+      "keyRisks": [
+        "AI-native design tools (Framer, Galileo) could disrupt low end",
+        "Recent CTO transition \u2014 Evan Wallace departure is key-person risk",
+        "IPO timing uncertainty after prolonged private period",
+        "Enterprise consolidation could favor Microsoft/Adobe for procurement",
+        "Growth rate may decelerate as design market matures"
+      ],
+      "recommendation": "Buy ahead of IPO. Figma's category dominance, technical moat, and clean post-Adobe balance sheet make it one of the most attractive late-stage private companies. Monitor AI roadmap execution and Framer growth rate."
+    },
+    "sources": []
+  }
+}

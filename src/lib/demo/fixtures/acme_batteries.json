@@ -1,0 +1,316 @@
+{
+  "id": "demo-acme-batteries",
+  "domain": "acme-batteries.in",
+  "status": "completed",
+  "createdAt": "2026-05-15T10:00:00.000Z",
+  "updatedAt": "2026-05-15T10:01:45.000Z",
+  "riskScores": {
+    "overall": 28,
+    "commercial": 42,
+    "technical": 35,
+    "esg": 18,
+    "regulatory": 12,
+    "competitive": 38,
+    "financial": 22,
+    "leadership": 30
+  },
+  "teaser": {
+    "status": "completed",
+    "data": {
+      "summary": "Acme Battery Solutions Pvt. Ltd. is a Tamil Nadu-based EV battery vendor claiming over a decade of manufacturing experience in lithium-ion cells, battery management systems, and EV charging solutions. However, cross-referencing against the Udyam MSME registration database reveals a critical discrepancy: the company's incorporation date is late 2024, making the '12+ years of experience' claim on their website factually impossible. This is classified as a Critical Red Flag and a potential deal-breaker for any PO issuance.",
+      "plgOrSlg": "SLG",
+      "techSignals": [
+        "Lithium-ion cell assembly (claimed \u2014 unverified)",
+        "BMS firmware: proprietary claims, no GitHub or patent evidence",
+        "ISO 26262 functional safety certification claimed \u2014 not found in public registry",
+        "Website built on WordPress \u2014 no engineering blog or technical disclosure",
+        "No verifiable tech stack signals beyond basic website infrastructure"
+      ]
+    },
+    "sources": [
+      "https://acme-batteries.in",
+      "https://acme-batteries.in/about",
+      "https://acme-batteries.in/products",
+      "https://udyam.gov.in",
+      "https://www.mca.gov.in"
+    ]
+  },
+  "engines": {
+    "commercial": {
+      "status": "completed",
+      "data": {
+        "plgSignals": [],
+        "slgSignals": [
+          "Contact form only \u2014 no self-serve pricing",
+          "WhatsApp Business number as primary sales channel",
+          "Bulk order inquiries via email only"
+        ],
+        "pricingVisibility": "Hidden",
+        "signupFlow": "Sales-assisted only",
+        "freeTrial": "No",
+        "pricingTiers": [
+          "Custom quotes only \u2014 no published pricing"
+        ],
+        "notes": "Pure SLG motion with no digital self-serve. Pricing opacity is a yellow flag for vendor transparency."
+      },
+      "sources": [
+        "https://acme-batteries.in/contact",
+        "https://acme-batteries.in/products"
+      ]
+    },
+    "technical": {
+      "status": "completed",
+      "data": {
+        "languages": [
+          "N/A \u2014 hardware manufacturer"
+        ],
+        "cloud": [
+          "None detected"
+        ],
+        "certifications": [
+          "ISO 26262 \u2014 CLAIMED on website, NOT found in public certification databases",
+          "AIS-156 Phase 2 compliance \u2014 claimed, unverified",
+          "IATF 16949 \u2014 claimed, no certificate number provided"
+        ],
+        "techDebtSignals": [
+          "No engineering blog, whitepaper, or technical disclosure",
+          "No patent filings in Controller General of Patents database",
+          "No product teardown reviews available online"
+        ],
+        "manufacturingClaims": "200 MWh annual capacity claimed \u2014 no audit report available",
+        "openSource": "No",
+        "notes": "CRITICAL: All technical certifications claimed on website but none independently verifiable. This is consistent with the Udyam registration mismatch \u2014 vendor may be misrepresenting capabilities."
+      },
+      "sources": [
+        "https://acme-batteries.in/certifications",
+        "https://www.ipindia.gov.in",
+        "https://www.bsi-india.com"
+      ]
+    },
+    "esg": {
+      "status": "completed",
+      "data": {
+        "sustainabilityReport": "None published",
+        "deiInitiatives": [],
+        "supplierRisks": [
+          "Cell sourcing from China not disclosed \u2014 potential conflict minerals exposure",
+          "No supplier code of conduct published",
+          "No Scope 1/2/3 emissions data available"
+        ],
+        "esgRating": null,
+        "notes": "No ESG reporting whatsoever. For a vendor entering the EV supply chain of an OEM with EU export obligations, this is a significant gap \u2014 EU Battery Regulation 2023 will require lifecycle carbon data by 2025."
+      },
+      "sources": [
+        "https://acme-batteries.in/sustainability"
+      ]
+    },
+    "aiAct": {
+      "status": "completed",
+      "data": {
+        "aiFeatures": [
+          "None identified \u2014 hardware manufacturer"
+        ],
+        "governanceSignals": [],
+        "riskTier": "Minimal",
+        "missingDisclosures": [],
+        "notes": "Not applicable. Hardware manufacturer with no AI product exposure."
+      },
+      "sources": []
+    },
+    "competitors": {
+      "status": "completed",
+      "data": {
+        "directCompetitors": [
+          {
+            "name": "Exide Industries",
+            "description": "India's largest battery manufacturer. 75+ years of documented operations.",
+            "threat": "N/A"
+          },
+          {
+            "name": "Amara Raja Energy",
+            "description": "Established VRLA and Li-ion battery manufacturer with OEM supply agreements.",
+            "threat": "N/A"
+          },
+          {
+            "name": "Tata Green Batteries",
+            "description": "Tata Group-backed EV battery venture. Strong OEM relationships.",
+            "threat": "N/A"
+          }
+        ],
+        "indirectCompetitors": [
+          "Luminous Power",
+          "Livguard",
+          "Epsilon Advanced Materials"
+        ],
+        "marketPosition": "Niche",
+        "differentiators": [
+          "Lower pricing than established players \u2014 reason unclear",
+          "Tamil Nadu proximity to Chennai OEM cluster"
+        ],
+        "moatStrength": "Weak",
+        "notes": "No verifiable competitive differentiation. Pricing advantage is unexplained and potentially unsustainable."
+      },
+      "sources": [
+        "https://acme-batteries.in/about"
+      ]
+    },
+    "redFlags": {
+      "status": "completed",
+      "data": {
+        "dealBreakers": [
+          "\ud83d\udea8 CRITICAL \u2014 UDYAM MISMATCH: Website claims '12+ years of experience in battery manufacturing' (implies founded ~2012). Udyam Registration Number UDM-TN-33-XXXX-2024 shows incorporation in October 2024. This is a material misrepresentation of company history.",
+          "\ud83d\udea8 HIGH \u2014 CERTIFICATION FRAUD RISK: ISO 26262, AIS-156, and IATF 16949 certificates claimed on website. None traceable to an accredited certification body. Certificate numbers not provided."
+        ],
+        "warnings": [
+          "No audited financials available",
+          "No verifiable customer references (OEM supply agreements claimed but not documented)",
+          "Domain registered October 2024 \u2014 same month as Udyam registration",
+          "WhatsApp-only sales channel unusual for claimed manufacturing scale"
+        ],
+        "lawsuits": [
+          "None found in MCA records \u2014 company too new to have litigation history"
+        ],
+        "dataBreaches": [
+          "N/A"
+        ],
+        "layoffs": "N/A \u2014 headcount not disclosed",
+        "regulatoryActions": [
+          "No GST filings found matching claimed revenue scale \u2014 possible GST compliance gap"
+        ],
+        "overallSeverity": "Critical",
+        "notes": "DO NOT ISSUE PO. Two independent critical red flags: Udyam incorporation mismatch and unverifiable safety certifications. Recommend escalating to vendor fraud screening before any further engagement."
+      },
+      "sources": [
+        "https://udyam.gov.in",
+        "https://www.mca.gov.in",
+        "https://acme-batteries.in/about",
+        "https://acme-batteries.in/certifications"
+      ],
+      "deepResearch": true
+    },
+    "financial": {
+      "status": "completed",
+      "data": {
+        "fundingRounds": [],
+        "totalFunding": "Not disclosed",
+        "latestValuation": "Unknown \u2014 private, unaudited",
+        "revenueEstimate": "Claims \u20b950Cr+ annual revenue \u2014 unverifiable",
+        "growthRate": "Unknown",
+        "profitability": "Unknown",
+        "ipoStatus": "Not applicable",
+        "burnRate": null,
+        "notes": "No verifiable financial data. Claimed revenue of \u20b950Cr+ is inconsistent with company age (registered October 2024). MCA filings show paid-up capital of \u20b910L only."
+      },
+      "sources": [
+        "https://www.mca.gov.in",
+        "https://acme-batteries.in/about"
+      ]
+    },
+    "leadership": {
+      "status": "completed",
+      "data": {
+        "keyExecutives": [
+          {
+            "name": "Rajesh Kumar (claimed)",
+            "title": "Managing Director",
+            "background": "No LinkedIn profile found. No verifiable prior employment history. MCA filing shows director since 2024."
+          }
+        ],
+        "founderLed": "Unknown",
+        "teamSize": "Claimed 200+ employees \u2014 MCA filings show 12 employees at incorporation",
+        "glassdoorRating": "No reviews",
+        "cultureSignals": [],
+        "hiringVelocity": "Unknown",
+        "keyPersonRisk": "High",
+        "notes": "CRITICAL: Claimed executive backgrounds are not independently verifiable. Employee count discrepancy between website claims (200+) and MCA incorporation filing (12) is significant."
+      },
+      "sources": [
+        "https://www.mca.gov.in",
+        "https://acme-batteries.in/team"
+      ]
+    },
+    "marketSizing": {
+      "status": "completed",
+      "data": {
+        "industry": "India EV Battery Manufacturing",
+        "tam": "\u20b985,000 Cr India EV battery market by 2030",
+        "sam": "\u20b912,000 Cr Tier-2/3 EV battery component supply",
+        "som": "Indeterminate \u2014 vendor capability unverified",
+        "cagr": "~38% CAGR for India EV adoption (2024-2030)",
+        "marketTrends": [
+          "PLI scheme incentivising domestic battery manufacturing",
+          "FAME-III subsidy driving OEM sourcing shift to Indian vendors",
+          "EU Battery Regulation forcing supply chain traceability from 2025",
+          "Hyundai, Tata, Mahindra accelerating vendor qualification programs"
+        ],
+        "tailwinds": [
+          "Government push for 30% EV penetration by 2030",
+          "Chennai automotive cluster is the supply chain epicentre",
+          "New entrant window before large players consolidate supply"
+        ],
+        "headwinds": [
+          "Exide and Amara Raja have entrenched OEM relationships",
+          "Chinese cell imports under anti-dumping scrutiny",
+          "Safety and certification bar rising due to EV fire incidents"
+        ],
+        "notes": "The market opportunity is real and large. However, this specific vendor's ability to participate is severely in question given the red flags identified."
+      },
+      "sources": [
+        "https://www.niti.gov.in/ev",
+        "https://www.siamindia.com"
+      ]
+    },
+    "annualReport": {
+      "status": "completed",
+      "data": {
+        "documentTitle": "Acme Battery Solutions FY2024 Annual Report",
+        "documentUrl": null,
+        "revenue": "\u20b947Cr (FY2024) \u2014 claimed, unverified",
+        "netIncome": null,
+        "totalAssets": null,
+        "keyRisks": [
+          "Financial data entirely unverifiable \u2014 no audited statements found",
+          "MCA filings show 10 employees vs. claimed 200+ workforce",
+          "No public annual report \u2014 /fetch returned no PDF document",
+          "Udyam registration mismatch flagged as potentially fraudulent"
+        ],
+        "keyOpportunities": [
+          "EV battery market growing at 28% CAGR in India",
+          "Government PLI scheme eligible if registration verified"
+        ],
+        "auditOpinion": null,
+        "fiscalYear": "FY2024",
+        "highlights": [
+          "No annual report PDF found via Linkup /fetch",
+          "Financial claims could not be verified from public filings",
+          "Fell back to Linkup /research investigate mode",
+          "MCA records contradicted revenue claims significantly"
+        ]
+      },
+      "sources": [],
+      "pdfSources": [],
+      "deepResearch": true
+    }
+  },
+  "executiveSummary": {
+    "status": "completed",
+    "data": {
+      "verdict": "Pass",
+      "investmentThesis": "Acme Battery Solutions presents an unacceptable vendor risk profile. Two critical, independently verifiable red flags \u2014 a Udyam registration mismatch proving fabricated company history, and unverifiable safety certifications \u2014 disqualify this vendor from PO issuance under any standard procurement compliance framework. The India EV battery market opportunity is genuine; this specific vendor is not.",
+      "keyStrengths": [
+        "Geographic proximity to Chennai OEM cluster",
+        "Claimed pricing advantage vs. established players",
+        "Tamil Nadu state government EV incentive eligibility (if legitimate)"
+      ],
+      "keyRisks": [
+        "\ud83d\udea8 CRITICAL: Website claims 12+ years experience; Udyam shows October 2024 incorporation",
+        "\ud83d\udea8 HIGH: Three safety certifications claimed; none traceable to accredited certification body",
+        "MCA filings show 12 employees vs. claimed 200+ workforce",
+        "No verifiable OEM supply agreements despite claims",
+        "Financial data entirely unverifiable \u2014 \u20b950Cr revenue claim vs. \u20b910L paid-up capital"
+      ],
+      "recommendation": "Do not issue PO. Escalate to vendor fraud screening immediately. Cross-reference director details (Rajesh Kumar) against MCA director blacklist and CIBIL commercial credit bureau. If engagement must continue, require physical factory audit with independent certification body present before any procurement decision."
+    },
+    "sources": []
+  }
+}
