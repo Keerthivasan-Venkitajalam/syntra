@@ -115,9 +115,9 @@ graph TB
     Score --> Exec[✨ Executive Summary<br/>Buy · Hold · Pass]
     Exec --> Twin[🌐 Living Twin]
 
-    Twin --> Dash[/dashboard/[id]/]
-    Twin --> Share[/share/[id]/]
-    Twin --> Compare[/compare?a=...&b=.../]
+    Twin --> Dash["/dashboard/[id]"]
+    Twin --> Share["/share/[id]"]
+    Twin --> Compare["/compare?a=...&b=..."]
 
     classDef linkup fill:#E8944A,stroke:#B86F2E,stroke-width:2px,color:#fff;
     classDef engine fill:#1f6feb,stroke:#1158c7,stroke-width:2px,color:#fff;
