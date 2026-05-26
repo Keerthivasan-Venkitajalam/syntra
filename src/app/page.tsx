@@ -117,7 +117,8 @@ export default function Home() {
         <header className="topbar">
           <div className="wrap topbar-inner">
             <div className="brand">
-              <span className="mono-mark">S</span>
+              {/* eslint-disable-next-line @next/next/no-img-element */}
+              <img src="/logo-nav.png" alt="Syntra" height={26} style={{ objectFit: "contain", display: "block" }} />
               <span>syntra</span>
               <span className="status">
                 <span className="pulse-dot" />

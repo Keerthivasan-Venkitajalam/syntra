@@ -570,7 +570,7 @@ export default function DashboardPage() {
                         Strengths
                       </p>
                       <ul style={{ listStyle: "none", padding: 0, margin: 0, display: "flex", flexDirection: "column", gap: 8 }}>
-                        {report.executiveSummary.data.keyStrengths.map((s, i) => (
+                        {(report.executiveSummary.data.keyStrengths ?? []).map((s, i) => (
                           <li key={i} style={{ display: "flex", gap: 8, fontSize: 13, color: "var(--ink-2)", lineHeight: 1.5 }}>
                             <span style={{ color: "var(--green)", flexShrink: 0 }}>✓</span>{s}
                           </li>
@@ -582,7 +582,7 @@ export default function DashboardPage() {
                         Risks
                       </p>
                       <ul style={{ listStyle: "none", padding: 0, margin: 0, display: "flex", flexDirection: "column", gap: 8 }}>
-                        {report.executiveSummary.data.keyRisks.map((r, i) => (
+                        {(report.executiveSummary.data.keyRisks ?? []).map((r, i) => (
                           <li key={i} style={{ display: "flex", gap: 8, fontSize: 13, color: "var(--ink-2)", lineHeight: 1.5 }}>
                             <span style={{ color: "var(--red)", flexShrink: 0 }}>—</span>{r}
                           </li>
@@ -750,12 +750,8 @@ function PageShell({ children }: { children: React.ReactNode }) {
         }}>
           <div style={{ maxWidth: "var(--max-w)", margin: "0 auto", padding: "0 var(--pad)", display: "flex", alignItems: "center", justifyContent: "space-between", height: 60 }}>
             <Link href="/" style={{ display: "flex", alignItems: "center", gap: 10 }}>
-              <div style={{
-                width: 28, height: 28, border: "1px solid var(--rule-strong)", borderRadius: 7,
-                display: "flex", alignItems: "center", justifyContent: "center",
-                fontFamily: "var(--t-display)", fontStyle: "italic", fontSize: 14, color: "var(--accent)",
-                background: "var(--accent-glow)",
-              }}>S</div>
+              {/* eslint-disable-next-line @next/next/no-img-element */}
+              <img src="/logo-nav.png" alt="Syntra" height={28} style={{ objectFit: "contain", display: "block" }} />
               <span style={{ fontFamily: "var(--t-sans)", fontWeight: 600, fontSize: 15, letterSpacing: "-0.02em" }}>syntra</span>
             </Link>
             <Link href="/reports" style={{ fontFamily: "var(--t-mono)", fontSize: 12, color: "var(--muted)", letterSpacing: "0.04em" }}>

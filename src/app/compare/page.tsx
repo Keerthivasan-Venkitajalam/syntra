@@ -215,12 +215,8 @@ export default function ComparePage() {
       }}>
         <div style={{ maxWidth: "var(--max-w)", margin: "0 auto", padding: "0 var(--pad)", display: "flex", alignItems: "center", justifyContent: "space-between", height: 60 }}>
           <Link href="/" style={{ display: "flex", alignItems: "center", gap: 10 }}>
-            <div style={{
-              width: 28, height: 28, border: "1px solid var(--rule-strong)", borderRadius: 7,
-              display: "flex", alignItems: "center", justifyContent: "center",
-              fontFamily: "var(--t-display)", fontStyle: "italic", fontSize: 14,
-              color: "var(--accent)", background: "var(--accent-glow)",
-            }}>S</div>
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img src="/logo-nav.png" alt="Syntra" height={28} style={{ objectFit: "contain", display: "block" }} />
             <span style={{ fontFamily: "var(--t-sans)", fontWeight: 600, fontSize: 15, letterSpacing: "-0.02em" }}>syntra</span>
           </Link>
           <EasterEggDetector longPress onActivate={() => getDemoOrchestrator().twoTwinDebate()}>

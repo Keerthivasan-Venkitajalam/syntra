@@ -23,9 +23,14 @@ const instrumentSerif = Instrument_Serif({
 });
 
 export const metadata: Metadata = {
-  title: "Syntra — Company Twins for Continuous Intelligence",
+  title: "Syntra — Intelligence Twins for Modern M&A",
   description:
-    "Type a domain. Syntra runs 9 parallel intelligence engines and builds a living Twin — structured, queryable, diffable company intelligence.",
+    "Drop a domain. Syntra fires 10 parallel intelligence engines and builds a living Twin — source-cited, diffable, and shareable M&A due diligence in minutes.",
+  icons: {
+    icon: [
+      { url: "/favicon.png", type: "image/png", sizes: "32x32" },
+    ],
+  },
 };
 
 export default function RootLayout({
