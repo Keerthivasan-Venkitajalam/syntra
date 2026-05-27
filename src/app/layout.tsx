@@ -28,7 +28,8 @@ export const metadata: Metadata = {
     "Drop a domain. Syntra fires 10 parallel intelligence engines and builds a living Twin — source-cited, diffable, and shareable M&A due diligence in minutes.",
   icons: {
     icon: [
-      { url: "/favicon.png", type: "image/png", sizes: "32x32" },
+      { url: "/favicon.png", type: "image/png", sizes: "64x64" },
+      { url: "/favicon.ico", sizes: "any" },
     ],
   },
 };
