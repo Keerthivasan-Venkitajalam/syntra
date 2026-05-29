@@ -1,28 +1,29 @@
 <div align="center">
 
-<img src="public/logo-icon.png" width="120" alt="Syntra" />
+<img src="public/logo-icon.png" width="100" alt="Syntra" />
 
 # Syntra
 
 ### Intelligence Twins for Modern M&A
 
-**Drop a domain. Syntra fires 10 parallel intelligence engines and delivers a living, source-cited, diffable company Twin in under 5 minutes.**
+**Drop a domain. Ten parallel Linkup engines fire. A living, source-cited, diffable company Twin lands in under 5 minutes.**
 
 <br/>
 
-[![Live Demo](https://img.shields.io/badge/🔴%20Live%20Demo-syntra.vercel.app-E8944A?style=for-the-badge)](https://syntra-six-delta.vercel.app)
+[![Live Product](https://img.shields.io/badge/🔴%20LIVE-syntra--six--delta.vercel.app-E8944A?style=for-the-badge)](https://syntra-six-delta.vercel.app)
+[![Video Demo](https://img.shields.io/badge/▶%20Demo%20Video-YouTube-FF0000?style=for-the-badge&logo=youtube)](https://youtu.be/ytnakM-U1aM)
 [![Linkup Hackathon](https://img.shields.io/badge/Linkup%20Async%20Hackathon-May%202026-6366f1?style=for-the-badge)](https://linkup.so)
 [![License](https://img.shields.io/badge/license-MIT-22c55e?style=for-the-badge)](LICENSE)
 
 [![Next.js](https://img.shields.io/badge/Next.js-16.2-black?style=flat-square&logo=next.js)](https://nextjs.org)
-[![React](https://img.shields.io/badge/React-19-149ECA?style=flat-square&logo=react)](https://react.dev)
-[![TypeScript](https://img.shields.io/badge/TypeScript-5.4-3178C6?style=flat-square&logo=typescript)](https://typescriptlang.org)
+[![TypeScript](https://img.shields.io/badge/TypeScript-5.x-3178C6?style=flat-square&logo=typescript)](https://typescriptlang.org)
 [![Linkup](https://img.shields.io/badge/Powered%20by-Linkup-E8944A?style=flat-square)](https://linkup.so)
 [![Vercel](https://img.shields.io/badge/Deployed%20on-Vercel-000000?style=flat-square&logo=vercel)](https://vercel.com)
+[![Built in 96h](https://img.shields.io/badge/Built%20Solo-96%20Hours-blueviolet?style=flat-square)](https://github.com/Keerthivasan-Venkitajalam/syntra)
 
 <br/>
 
-[About](#about-the-project) • [How We Used Linkup](#how-we-used-linkup-in-syntra) • [Architecture](#system-architecture) • [Tech Stack](#tech-stack) • [Engines](#the-ten-intelligence-engines) • [Getting Started](#getting-started) • [Demo Mode](#demo-mode--easter-eggs)
+[Thesis](#the-thesis) · [Linkup Usage](#how-we-used-linkup) · [Live Twins](#live-intelligence-twins) · [Architecture](#system-architecture) · [Engines](#the-ten-engines) · [Getting Started](#getting-started) · [Traction](#traction)
 
 <br/>
 
@@ -32,61 +33,147 @@
 
 ---
 
-## About the Project
+## Deliverables
 
-**Syntra** is an autonomous **M&A due diligence platform** that compresses what normally takes a deal team three weeks into a **five-minute Twin**. Unlike chat-based "research assistants" that hallucinate citations and lose state between turns, Syntra produces a structured, source-cited, **diffable artifact** — what we call a **Twin** — a living JSON object that captures every dimension of a target company.
+> Everything a judge needs — one table, zero hunting.
 
-You drop a domain. Syntra fans out **ten parallel intelligence engines** through Linkup's `/search`, `/research`, and `/fetch` (PDF) endpoints, sanitizes every scraped span against prompt-injection patterns, synthesizes structured outputs through the **Vercel AI Gateway**, and renders the result as a Bloomberg-terminal-style dashboard you can share, export, or pit head-to-head against another Twin in a comparison view.
+| Artifact | Link | Description |
+| :--- | :--- | :--- |
+| **Live Product** | [syntra-six-delta.vercel.app](https://syntra-six-delta.vercel.app) | Drop any domain → get a Twin |
+| **Video Demo** | [youtu.be/ytnakM-U1aM](https://youtu.be/ytnakM-U1aM) | 6:30 narrated walkthrough |
+| **GitHub** | [Keerthivasan-Venkitajalam/syntra](https://github.com/Keerthivasan-Venkitajalam/syntra) | Full source, open-source |
+| **LinkedIn** | [Post — a16z compliance essay](https://www.linkedin.com/posts/keerthivasansv_andreessen-horowitz-recently-published-an-activity-7466011933473697793-U_pK) | The thesis behind Syntra |
+| **Stripe Twin** | [/dashboard/demo-stripe](https://syntra-six-delta.vercel.app/dashboard/demo-stripe) | Score 82 · **BUY** · 22 sources |
+| **Figma Twin** | [/dashboard/demo-figma](https://syntra-six-delta.vercel.app/dashboard/demo-figma) | Score 76 · **BUY** · 24 sources |
+| **Acme Batteries** | [/dashboard/demo-acme-batteries](https://syntra-six-delta.vercel.app/dashboard/demo-acme-batteries) | Score 28 · **PASS** · fraud detected |
+| **Compare View** | [Stripe vs Figma](https://syntra-six-delta.vercel.app/compare?a=demo-stripe&b=demo-figma) | Side-by-side Twin diff |
+| **All Twins** | [/reports](https://syntra-six-delta.vercel.app/reports) | Full Intelligence Twin index |
 
-### Three Transformations
-
-- **Fragmented to Twinned** — No more 47 open tabs. Every commercial, technical, ESG, regulatory, financial, and leadership signal lives in **one structured object** keyed to its source URL.
-- **Hallucinated to Cited** — Every claim in a Twin links back to a Linkup-retrieved source. There are no "trust me bro" sentences. If a span doesn't cite, it doesn't ship.
-- **Static to Diffable** — A Twin is JSON. You can diff today's Stripe Twin against yesterday's, alert on PLG signal regressions, and queue them through an API for downstream actuarial models.
-
-![Syntra Full Landing](public/screenshots/02-landing-full.png)
+> **Bonus for judges:** Run a live Twin on any domain — real Linkup API calls fire in real time.
 
 ---
 
-## How We Used Linkup in Syntra
+## The Thesis
 
-Syntra is a **Linkup-native** application. We treat Linkup not as a single search box but as a **three-endpoint research stack** that mirrors how an analyst actually works: scan, dig, and read.
+Andreessen Horowitz recently argued that compliance is AI's biggest opportunity — not because AI can write better contracts, but because the real bottleneck is navigating vast amounts of **fragmented, perishable information** that no analyst can hold in their head.
 
-### 1. As the Discovery Layer (`/search`)
+**The same problem destroys M&A.**
 
-Standard- and deep-depth searches drive the **fast scan**:
+Today, due diligence means weeks of analysts manually reading annual reports, regulatory filings, ESG disclosures, litigation records, competitor websites, and job postings. The output is a PDF that can't be queried, diffed, or alerted on. By the time a deal closes, half the intelligence is stale.
 
-- **`linkupSearch({ depth: "standard" })`** — sub-second sweeps that produce the **Teaser** (3-sentence overview, PLG-vs-SLG classification, tech-stack signals). Used by 6 of the 10 engines for breadth-first signal capture.
-- **`linkupSearch({ depth: "deep" })`** — multi-step crawls reserved for engines that need page-level depth: **Commercial** (pricing funnel), **EU AI Act** (governance disclosures), **Competitors** (moat analysis).
+**Syntra solves this by inverting the output format.**
 
-### 2. As the Autonomous Research Agent (`/research`)
+Instead of a PDF, you get a **Twin** — a structured, source-cited JSON object that represents a target company across 10 intelligence dimensions. Every claim links to a Linkup-sourced URL. Every engine is independently auditable. Every Twin is diffable against yesterday's version, comparable against a competitor, and embeddable in downstream actuarial models.
 
-For engines where the answer is buried across many sources, we hand off to Linkup's autonomous agent:
+```
+A due diligence report that is 90% correct is still 100% wrong.
+```
 
-- **`linkupResearch({ mode: "investigate", depth: "S" })`** — used by the **Red Flags & Risk** engine to cross-reference lawsuits, breaches, layoffs, and regulatory actions in a single sourced answer instead of stitching 12 search results manually.
-- Depth tiers `S → XL` map to `$0.25 / $0.75 / $1.50 / $2.50` per call. We default to `S` for hackathon economics; production deals can dial up to `XL` for board-grade rigor.
+That's why every claim in a Syntra Twin cites its source — or it doesn't ship.
 
-### 3. As the Primary-Source Reader (`/fetch` with PDF support)
+![Syntra Landing Full](public/screenshots/02-landing-full.png)
 
-Linkup's `/fetch` accepts PDFs up to 20 MB and returns clean LLM-ready markdown. This unlocks **primary-source extraction** without a separate PDF pipeline:
+---
 
-- **`linkupFetch(url)`** is called automatically when search results surface a `.pdf` (10-K filings, ESG impact reports, climate disclosures).
-- The **Annual Report** engine uses this to extract revenue, audit opinion, fiscal year, and key risks **verbatim from the SEC filing** rather than from a journalist's summary.
-- The **Financial** and **ESG** engines render a green "PDF" chip in the UI when a citation came from a fetched document — a verifiability signal an analyst can lean on.
+## Live Intelligence Twins
 
-### 4. As the Demo Substrate (Zero-Cost Determinism)
+Three complete Twins generated from real Linkup API calls during development:
 
-When `SYNTRA_DEMO_MODE=true`, every Linkup call is intercepted and routed to **pre-built fixtures** for `stripe.com`, `figma.com`, and `acme-batteries.in`. This means:
+### Stripe.com — Score 82 · BUY
 
-- **Zero outbound API calls** during a demo or judging run.
-- **Deterministic output** — the same Twin, every time, frame-perfect.
-- **Eight scripted Easter-egg scenarios** (sentinel diff alerts, engine degradation, two-Twin debates, Udyam red-flag fires, verifier contradictions, prompt-injection blocks) that all share the same data plane.
+> *"Generational fintech infrastructure. $16.5B gross revenue, profitable, developer moat. Best-in-class PLG signals across 27 cited sources."*
+
+- PLG signal strength: **Strong** — free tier, self-serve onboarding, usage-based pricing
+- Technical stack confirmed from live job listings + engineering blog
+- Audit opinion: **Clean** — verified from primary SEC filing via `/fetch`
+
+### Figma.com — Score 76 · BUY
+
+> *"Post-Adobe-block IPO candidate. $749M ARR, AI-native design wedge, but competitive pressure from Canva and VS Code intensifying."*
+
+- Market leadership confirmed via 22 live sources
+- Leadership stability signal: **Moderate** — CEO intact, recent C-suite additions
+- EU AI Act exposure: **Low** — no autonomous decision-making features flagged
+
+### Acme Batteries India — Score 28 · PASS
+
+> *"Udyam registration number does not resolve to this entity. MCA incorporation date (2021) contradicts public claims of '10 years in business.' Adverse media signals flagged."*
+
+This is what Syntra is built for. Static datasets don't catch a fake company. Linkup's `/research` investigate mode cross-referenced:
+- Udyam portal records ↔ stated business identity → **mismatch**
+- MCA filing date ↔ "10 years experience" claim → **contradiction**
+- Glassdoor, LinkedIn, news → **no corroborating employee records**
+
+**The fraud catch took under 5 minutes. It would have taken a human analyst 2 days.**
+
+<p align="center">
+  <img src="public/screenshots/05-dashboard-acme.png" width="49%" alt="Acme Batteries — PASS verdict" />
+  <img src="public/screenshots/03-dashboard-stripe.png" width="49%" alt="Stripe — BUY verdict" />
+</p>
+<p align="center"><em>Left: Acme Batteries — 22/100, PASS, fraud indicators lit. Right: Stripe — 82/100, BUY, 27 cited sources.</em></p>
+
+---
+
+## How We Used Linkup
+
+Syntra is **Linkup-native** — every intelligence dimension runs through a different Linkup endpoint, mirroring how an analyst actually works: scan, investigate, and read primary sources.
+
+### `/search` — The Discovery Layer (6 engines)
+
+Standard and deep-depth sweeps that power the fast scan:
+
+| Engine | What It Searches | Why Linkup |
+|:---|:---|:---|
+| Commercial Footprint | Pricing pages, PLG signals, onboarding funnel | Pricing changes live — no static dataset captures it |
+| Technical Stack | Job postings, GitHub org, engineering blog | Live job descriptions reveal actual stack, not 3-year-old Crunchbase data |
+| Leadership & Culture | Founder backgrounds, Glassdoor, hiring velocity | CEO departure last month isn't in any static dataset |
+| Market Sizing | Analyst reports, TAM commentary, CAGR signals | Market sizing changes quarterly — live commentary matters |
+| Competitive Landscape | Competitor pricing, product launches, moat signals | Competitor moves happen in real time |
+| EU AI Act Risk | AI product disclosures, GDPR exposure, governance docs | Complex cross-source reasoning — regulatory text + product descriptions |
+
+```typescript
+// Standard sweep — sub-second, breadth-first
+const result = await linkupSearch({ query, depth: "standard" });
+
+// Deep sweep — multi-page crawl, used by Commercial + Competitors
+const result = await linkupSearch({ query, depth: "deep" });
+```
+
+### `/research` — The Autonomous Investigation Layer (2 engines)
+
+For answers buried across many sources, we hand off to Linkup's autonomous agent:
+
+| Engine | What It Investigates | Why `/research` |
+|:---|:---|:---|
+| Red Flags & Risk | Litigation, regulatory actions, adverse media, financial irregularities | Cross-source reasoning required — the Acme fraud catch needed simultaneous Udyam + MCA + news triangulation |
+| Annual Report Deep Dive | 10-K key risks, off-balance-sheet items, audit qualifications | Multi-document synthesis that single `/search` calls can't achieve |
+
+```typescript
+// Autonomous investigation — finds what /search misses
+const result = await linkupResearch({ query, mode: "investigate", depth: "S" });
+```
+
+### `/fetch` — The Primary-Source Layer (2 engines)
+
+Instead of relying on journalist summaries, Syntra reads the actual documents:
+
+| Engine | What It Fetches | Why `/fetch` |
+|:---|:---|:---|
+| Annual Report | Actual 10-K / annual report PDF — revenue, audit opinion, fiscal year | No summarised version is sufficient — Syntra extracts the source document |
+| ESG Filings | Sustainability report PDFs — Scope 1/2/3, targets, supplier standards | Same principle — primary source only, not press release |
+
+```typescript
+// PDF extraction — up to 20MB, returns LLM-ready markdown
+const content = await linkupFetch(pdfUrl);
+```
+
+**When Linkup is called:** The moment a user submits a domain, all 10 engines launch via `Promise.allSettled()`. Each engine independently resolves its Linkup calls, sanitizes the result against prompt-injection patterns, and emits structured JSON. Three failed engines still ship a complete Twin.
 
 ---
 
 ## System Architecture
 
-Syntra follows a **fan-out / fan-in** pipeline. A single domain submission expands into ten parallel engine runs, each fully isolated, each citing its own sources, and all converge into one risk-scored Twin.
+Syntra follows a **fan-out / fan-in** pipeline. One domain submission → ten isolated engine runs → one risk-scored Twin.
 
 ```mermaid
 graph TB
@@ -141,24 +228,81 @@ graph TB
 
 ### The Engine Contract
 
-Every engine is a pure function with an identical, replaceable shape:
+Every engine is a pure, replaceable function:
 
 ```typescript
 type EngineFn = (domain: string) => Promise<{
   data: Record<string, unknown> | null;
   sources: string[];
-  pdfSources?: PdfSource[];     // present when /fetch was used
-  deepResearch?: boolean;       // true when /research was used
+  pdfSources?: PdfSource[];   // present when /fetch was used
+  deepResearch?: boolean;     // true when /research was used
 }>;
 ```
 
-This makes engines **independently testable**, **independently failable** (graceful degradation — three failed engines still ship a Twin), and **independently swappable** (any engine can be replaced without touching the orchestrator).
+**Independently testable. Independently failable. Independently swappable.**  
+Three failed engines still ship a complete Twin — graceful degradation is first-class.
+
+---
+
+## The Ten Engines
+
+| # | Engine | Linkup Endpoint | Outputs |
+|:---:|:---|:---|:---|
+| 01 | **Commercial Footprint** | `/search` deep | PLG/SLG signals · pricing tiers · signup funnel friction |
+| 02 | **Technical Stack** | `/search` standard | Languages · cloud · databases · tech-debt signals |
+| 03 | **ESG Posture** | `/search` + `/fetch` PDF | Scope 1/2/3 · DEI · sustainability certifications |
+| 04 | **EU AI Act Risk** | `/search` deep | AI feature inventory · risk classification · missing disclosures |
+| 05 | **Competitive Map** | `/search` deep | Direct + indirect competitors · moat strength · positioning |
+| 06 | **Red Flags & Risk** | `/research` investigate | Litigation · breaches · layoffs · regulatory actions |
+| 07 | **Financial Deep Dive** | `/search` + `/fetch` PDF | Funding · valuation · revenue · runway signals |
+| 08 | **Leadership & Culture** | `/search` standard | Key execs · Glassdoor · hiring velocity · key-person risk |
+| 09 | **Market Sizing** | `/search` standard | TAM/SAM/SOM · CAGR · tailwinds · headwinds |
+| 10 | **Annual Report** | `/fetch` PDF + `/research` | Revenue · audit opinion · key risks · fiscal highlights |
+
+The eleventh "engine" — the **Executive Summary** — runs after all ten complete. It ingests aggregate output, scores seven risk dimensions, and emits a **Buy / Hold / Pass** verdict with thesis, strengths, and risks.
 
 <p align="center">
-  <img src="public/screenshots/03-dashboard-stripe.png" width="48%" alt="Stripe Twin Dashboard" />
-  <img src="public/screenshots/04-dashboard-figma.png" width="48%" alt="Figma Twin Dashboard" />
+  <img src="public/screenshots/04-dashboard-figma.png" width="49%" alt="Figma Twin Dashboard" />
+  <img src="public/screenshots/06-compare.png" width="49%" alt="Twin Comparison — Stripe vs Figma" />
 </p>
-<p align="center"><em>Two Buy-verdict Twins: Stripe (82/100) and Figma (76/100) — risk radar, executive summary, and all 10 engines rendered live.</em></p>
+<p align="center"><em>Left: Figma Twin — 71/100, HOLD. Right: Stripe vs Figma field-level diff in the compare view.</em></p>
+
+---
+
+## Demo Mode
+
+Run `SYNTRA_DEMO_MODE=true` and three pre-built Twins seed instantly with **zero outbound API calls**. Every Linkup call is intercepted and routed to pre-built fixtures — deterministic, offline-safe, frame-perfect.
+
+### Eight Scripted Scenarios
+
+Triggered via `DemoOrchestrator` or hidden keyboard/scroll gestures on the landing page:
+
+| # | Scenario | Demonstrates |
+|:---:|:---|:---|
+| 1 | `seedDemoTwins()` | All three Twins appear on the landing page instantly |
+| 2 | `udyamRedFlagFire()` | Navigate to Acme Twin — red-flag UI lights up, sources highlighted |
+| 3 | `sentinelDiffAlert()` | Banner fires: Stripe pricing page changed, PLG signal weakened |
+| 4 | `engineDegradationGraceful()` | ESG engine flips to rate-limited, rest of Twin still ships |
+| 5 | `verifierContradictsClaim()` | Citation chip flips red — Verifier caught a hallucination |
+| 6 | `twoTwinDebate()` | Side-by-side Stripe vs Figma comparison |
+| 7 | `promptInjectionBlocked()` | Toast: quarantined payload detected, sanitizer in action |
+| 8 | `resetAll()` | Clears every overlay back to clean state |
+
+Each scenario is deterministic, replayable, and offline-safe — exactly what a judging panel or a sales demo demands.
+
+---
+
+## Traction
+
+| Signal | Evidence |
+|:---|:---|
+| **Live product** | [syntra-six-delta.vercel.app](https://syntra-six-delta.vercel.app) — no login, any domain |
+| **Real API calls** | Linkup dashboard shows $0.514 remaining from initial credits — not mocked, not faked |
+| **3 complete Twins** | Stripe (82/BUY, 22 sources), Figma (76/BUY, 24 sources), Acme (28/PASS, fraud detected) |
+| **Fraud catch** | Acme Batteries: Udyam mismatch + MCA incorporation contradiction — surfaced by `/research` |
+| **Built solo** | One developer, Coimbatore, India, 96 hours |
+| **Public source** | [github.com/Keerthivasan-Venkitajalam/syntra](https://github.com/Keerthivasan-Venkitajalam/syntra) |
+| **Video demo** | [youtu.be/ytnakM-U1aM](https://youtu.be/ytnakM-U1aM) — 6m 30s narrated walkthrough |
 
 ---
 
@@ -167,91 +311,28 @@ This makes engines **independently testable**, **independently failable** (grace
 ### Intelligence Layer
 
 | Component | Role |
-| :--- | :--- |
-| **Linkup `/search`** | Standard + deep web sweeps · 92 % F-score on SimpleQA · powers 9 of 10 engines |
-| **Linkup `/research`** | Autonomous multi-step investigation · used by Red Flags engine |
-| **Linkup `/fetch` (PDF)** | Primary-source extraction · turns 10-Ks and ESG PDFs into LLM-ready markdown |
+|:---|:---|
+| **Linkup `/search`** | Standard + deep web sweeps — powers 9 of 10 engines |
+| **Linkup `/research`** | Autonomous multi-step investigation — Red Flags engine |
+| **Linkup `/fetch` (PDF)** | Primary-source extraction — 10-Ks and ESG PDFs → LLM-ready markdown |
 | **Vercel AI Gateway** | Provider-agnostic LLM routing with observability + caching |
 | **Anthropic Sonnet 4.5** | Default synthesis model for structured JSON output |
 
 ### Application Layer
 
 | Component | Version | Purpose |
-| :--- | :--- | :--- |
+|:---|:---|:---|
 | **Next.js** | 16.2.5 | App Router · server actions · edge-deployable |
 | **React** | 19.2.4 | Concurrent rendering for live engine status |
 | **TypeScript** | 5.x | End-to-end type safety from API to Twin |
 | **Tailwind CSS** | v4 | Bloomberg-terminal aesthetic · dark-first |
-| **Custom CSS** | — | Curtain reveals, marquee tickers, live clock |
 
-### Runtime & Safety
+### Safety Layer
 
-- **Prompt-injection sanitizer** — scores every scraped span on regex + entropy heuristics before it touches the LLM
-- **Rate limiter** — in-memory token bucket gating per-IP report creation
-- **HTTP client with retries** — `fetchWithRetry` wraps every Linkup call with exponential backoff
-- **In-memory report store** — swappable for Postgres / Redis in production
-- **Demo intercept layer** — full `SYNTRA_DEMO_MODE` bypass for zero-cost judging runs
-
----
-
-## The Ten Intelligence Engines
-
-Each engine is an isolated worker that queries Linkup, sanitizes the result, calls the AI Gateway with a structured-output schema hint, and returns typed JSON.
-
-| # | Engine | Linkup Mode | Outputs |
-| :---: | :--- | :--- | :--- |
-| 01 | **Commercial Footprint** | `/search` deep | PLG/SLG signals · pricing visibility · signup flow · tiers |
-| 02 | **Technical Stack** | `/search` standard | Languages · cloud · databases · vendors · tech-debt signals |
-| 03 | **ESG Posture** | `/search` + `/fetch` PDF | Scope 1/2/3 emissions · DEI initiatives · supplier risk |
-| 04 | **EU AI Act Risk** | `/search` deep | AI feature inventory · risk tier · missing disclosures |
-| 05 | **Competitive Map** | `/search` deep | Direct + indirect competitors · moat strength · market position |
-| 06 | **Red Flags & Risk** | `/research` investigate | Lawsuits · breaches · layoffs · regulatory actions |
-| 07 | **Financial Deep Dive** | `/search` + `/fetch` PDF | Funding rounds · valuation · revenue · profitability |
-| 08 | **Leadership & Culture** | `/search` standard | Key execs · Glassdoor · hiring velocity · key-person risk |
-| 09 | **Market Sizing** | `/search` standard | TAM/SAM/SOM · CAGR · tailwinds · headwinds |
-| 10 | **Annual Report** | `/fetch` PDF + `/research` | Revenue · audit opinion · key risks · fiscal-year highlights |
-
-The eleventh "engine," the **Executive Summary**, runs *after* the ten finish — it ingests their aggregate output, computes a composite risk score across seven dimensions, and produces a **Buy / Hold / Pass** verdict with thesis, strengths, and risks.
-
-![Stripe Share Page](public/screenshots/07-share-stripe.png)
-<p align="center"><em>The public share view for stripe.com — every engine's output, sources, and PDF citations in a shareable read-only URL.</em></p>
-
----
-
-## Demo Mode & Easter Eggs
-
-Syntra ships with a fully self-contained presentation layer. Run `SYNTRA_DEMO_MODE=true` and three pre-built Twins seed instantly with zero outbound traffic.
-
-### Featured Twins
-
-| Twin | Verdict | Story |
-| :--- | :---: | :--- |
-| **Stripe.com** | Buy | Generational platform · $16.5B gross revenue · profitable · strongest dev moat in fintech |
-| **Figma.com** | Buy | Post-Adobe-block IPO path · $749M ARR · AI-native design wedge |
-| **Acme-batteries.in** | Pass | Udyam registration mismatch · MCA filings contradict claims · flagged fraudulent |
-
-### Eight Scripted Scenarios
-
-Triggered through the client-side `DemoOrchestrator` (or via the hidden landing-page Easter-egg detector):
-
-| # | Scenario | What It Demonstrates |
-| :---: | :--- | :--- |
-| 1 | `seedDemoTwins()` | All three Twins materialize on the landing page instantly |
-| 2 | `udyamRedFlagFire()` | Navigates to the fraudulent Acme Twin · red-flag UI lights up |
-| 3 | `sentinelDiffAlert()` | Banner: Stripe pricing page changed · PLG signal weakened |
-| 4 | `engineDegradationGraceful()` | ESG engine flips to "rate-limited" · rest of Twin still ships |
-| 5 | `verifierContradictsClaim()` | Citation chip flips red · the Verifier caught a hallucination |
-| 6 | `twoTwinDebate()` | Side-by-side Stripe-vs-Figma comparison page |
-| 7 | `promptInjectionBlocked()` | Toast: quarantined payload detected · sanitizer in action |
-| 8 | `resetAll()` | Clears every scripted overlay back to a clean slate |
-
-Each scenario is **deterministic, replayable, and offline-safe** — exactly what a hackathon judging panel or a sales demo demands.
-
-<p align="center">
-  <img src="public/screenshots/06-compare.png" width="55%" alt="Twin Comparison — Stripe vs Figma" />
-  <img src="public/screenshots/10-acme-pass.png" width="41%" alt="Acme Batteries — Pass Verdict" />
-</p>
-<p align="center"><em>Left: Two-Twin field-level diff (Stripe 82 vs Figma 76). Right: Acme Batteries flagged Pass (28/100) — Udyam mismatch, MCA fraud signals.</em></p>
+- **Prompt-injection sanitizer** — scores every Linkup-returned span on regex + entropy heuristics before the LLM sees it
+- **Rate limiter** — in-memory token bucket per-IP on report creation
+- **`fetchWithRetry`** — wraps every Linkup call with exponential backoff
+- **Demo intercept** — full `SYNTRA_DEMO_MODE` bypass for zero-cost judging runs
 
 ---
 
@@ -259,64 +340,48 @@ Each scenario is **deterministic, replayable, and offline-safe** — exactly wha
 
 ### Prerequisites
 
-- **Node.js** 18+
-- **npm** (or pnpm / yarn / bun)
-- API Keys for:
-  - **`LINKUP_API_KEY`** — €5 free credits at [app.linkup.so](https://app.linkup.so)
-  - **LLM access** — either `OPENAI_API_KEY` or `VERCEL_AI_GATEWAY_API_KEY`
+- Node.js 18+
+- A **Linkup API key** — €5 free credits at [app.linkup.so](https://app.linkup.so)
+- An LLM key — `OPENAI_API_KEY` or `VERCEL_AI_GATEWAY_API_KEY`
 
 ### Installation
 
-1. **Clone the repository**
+```bash
+# 1. Clone
+git clone https://github.com/Keerthivasan-Venkitajalam/syntra.git
+cd syntra
 
-   ```bash
-   git clone https://github.com/Keerthivasan-Venkitajalam/syntra.git
-   cd syntra
-   ```
+# 2. Install
+npm install
 
-2. **Install dependencies**
+# 3. Configure
+cp .env.example .env.local
+```
 
-   ```bash
-   npm install
-   ```
+```env
+# Required
+LINKUP_API_KEY=lk_live_...
+OPENAI_API_KEY=sk-...               # or use VERCEL_AI_GATEWAY_API_KEY
+NEXT_PUBLIC_BASE_URL=http://localhost:3000
 
-3. **Configure environment**
+# Optional
+VERCEL_AI_GATEWAY_API_KEY=...
+AI_MODEL=gpt-4o-mini
+SYNTRA_DEMO_MODE=false              # set true for fixture-only mode
+```
 
-   Copy the template and fill in your keys:
+```bash
+# 4. Run
+npm run dev
+# → http://localhost:3000
+```
 
-   ```bash
-   cp .env.example .env.local
-   ```
+### Demo Mode (no API keys needed)
 
-   ```env
-   # Required
-   LINKUP_API_KEY=lk_live_...
-   OPENAI_API_KEY=sk-...                       # or use VERCEL_AI_GATEWAY_API_KEY
-   NEXT_PUBLIC_BASE_URL=http://localhost:3000
-
-   # Optional
-   VERCEL_AI_GATEWAY_API_KEY=...
-   AI_MODEL=gpt-4o-mini
-   SYNTRA_DEMO_MODE=false                       # set true for fixture-only mode
-   ```
-
-4. **Run the development server**
-
-   ```bash
-   npm run dev
-   ```
-
-   Open [http://localhost:3000](http://localhost:3000) and submit a domain.
-
-5. **Or run in demo mode (no API keys needed)**
-
-   ```bash
-   npm run demo:check     # verify all three fixtures load
-   npm run demo:dev       # boot with SYNTRA_DEMO_MODE=true
-   ```
-
-![Reports History](public/screenshots/08-reports-index.png)
-<p align="center"><em>Report History — every Twin in the current session with risk score, verdict, engine count, and source count.</em></p>
+```bash
+npm run demo:dev     # boots with SYNTRA_DEMO_MODE=true
+npm run demo:check   # verify all three fixture Twins load
+```
 
 ---
 
@@ -326,178 +391,94 @@ Each scenario is **deterministic, replayable, and offline-safe** — exactly wha
 syntra/
 ├── src/
 │   ├── app/
-│   │   ├── page.tsx                  # Landing page — Bloomberg-terminal hero
-│   │   ├── layout.tsx                # Root layout + theme
-│   │   ├── globals.css               # Curtain reveals, marquee, dark theme
-│   │   ├── dashboard/
-│   │   │   ├── page.tsx              # Workspace — all Twins
-│   │   │   └── [id]/page.tsx         # Per-Twin dashboard with live engine status
+│   │   ├── page.tsx                  # Landing — Bloomberg-terminal hero
+│   │   ├── dashboard/[id]/page.tsx   # Per-Twin live dashboard
 │   │   ├── compare/page.tsx          # Two-Twin debate view
-│   │   ├── share/[id]/page.tsx       # Public, auth-less Twin share page
-│   │   ├── reports/page.tsx          # Reports index
+│   │   ├── share/[id]/page.tsx       # Public, auth-less Twin share
+│   │   ├── reports/page.tsx          # Full Twin index
 │   │   └── api/
-│   │       ├── report/create/        # POST — start a new Twin
-│   │       ├── report/[id]/          # GET   — fetch a Twin
-│   │       └── reports/              # GET   — list all Twins
+│   │       ├── report/create/        # POST — start a Twin
+│   │       ├── report/[id]/          # GET  — poll a Twin
+│   │       └── reports/              # GET  — list all Twins
 │   ├── components/
-│   │   ├── Shell.tsx                 # Page chrome with persistent nav
-│   │   ├── DomainForm.tsx            # Domain submission with validation
 │   │   ├── RiskRadar.tsx             # Seven-axis SVG radar chart
-│   │   ├── ShareExportButtons.tsx    # Copy link · PDF print · JSON export
-│   │   ├── ShareDemoLayer.tsx        # Verifier-contradiction overlay
-│   │   ├── DemoBanner.tsx            # Sentinel-diff banner
-│   │   ├── EasterEggDetector.tsx     # Hidden keyboard / scroll triggers
-│   │   ├── Reveal.tsx                # IntersectionObserver scroll reveal
+│   │   ├── DomainForm.tsx            # Domain submission + validation
+│   │   ├── EasterEggDetector.tsx     # Hidden gesture triggers
 │   │   ├── CurtainReveal.tsx         # First-load curtain animation
-│   │   ├── Marquee.tsx               # Engine-name ticker
-│   │   ├── LiveClock.tsx             # Local + UTC display in nav
-│   │   └── CopyEmail.tsx             # Click-to-copy contact chip
+│   │   └── Marquee.tsx               # Engine-name ticker
 │   └── lib/
-│       ├── types.ts                  # Report · EngineResult · RiskScores
-│       ├── validators.ts             # Domain + UUID validation
-│       ├── sanitization.ts           # Prompt-injection detection + scoring
-│       ├── http.ts                   # fetchWithRetry · exponential backoff
-│       ├── rateLimit.ts              # In-memory token bucket
 │       ├── linkup.ts                 # /search · /research · /fetch clients
-│       ├── aiGateway.ts              # Vercel AI Gateway + structured-output
-│       ├── reports.ts                # In-memory Twin store + mutators
+│       ├── sanitization.ts           # Prompt-injection scoring
 │       ├── runReport.ts              # Fan-out orchestrator
-│       ├── engines/
-│       │   └── index.ts              # 10 engines + executive summary + scoring
+│       ├── engines/index.ts          # 10 engines + executive summary
 │       └── demo/
 │           ├── demo_backend.ts       # SYNTRA_DEMO_MODE intercept layer
 │           ├── demo_orchestrator.ts  # Client-side scenario engine
 │           └── fixtures/             # stripe · figma · acme_batteries JSON
-├── .env.example                      # Template — committed
+├── docs/
+│   ├── adversarial_scenarios.md      # 60 failure modes + documented defenses
+│   └── demo_e2e.md                   # End-to-end demo architecture
 ├── API_DOCS.md                       # Full REST + engine reference
-├── DEPLOYMENT_CHECKLIST.md           # Pre-demo & Vercel rollout steps
-├── README_HACKATHON.md               # Original submission brief
-└── package.json
+└── DEPLOYMENT_CHECKLIST.md           # Pre-demo & Vercel rollout steps
 ```
 
 ---
 
 ## REST API
 
-Three endpoints, fully typed. See [`API_DOCS.md`](./API_DOCS.md) for the complete schema.
-
 | Method | Path | Purpose |
-| :--- | :--- | :--- |
+|:---|:---|:---|
 | `POST` | `/api/report/create` | Submit a domain · returns `{ id, domain, status }` |
-| `GET` | `/api/report/[id]` | Fetch a Twin · includes live engine status |
-| `GET` | `/api/reports` | List all Twins · sorted newest-first |
+| `GET` | `/api/report/[id]` | Poll a Twin · includes live engine status |
+| `GET` | `/api/reports` | List all Twins · newest-first |
 
 ```bash
-# Kick off a Twin
-curl -X POST http://localhost:3000/api/report/create \
+# Start a Twin
+curl -X POST https://syntra-six-delta.vercel.app/api/report/create \
   -H "Content-Type: application/json" \
   -d '{"domain": "stripe.com"}'
 
 # Poll for completion
-curl http://localhost:3000/api/report/<id>
+curl https://syntra-six-delta.vercel.app/api/report/<id>
 ```
+
+See [`API_DOCS.md`](./API_DOCS.md) for the full schema.
 
 ---
 
-## Configuration
+## Adversarial Resilience
+
+Syntra ships with a **60-scenario failure audit** — every meaningful way the intelligence layer can be gamed, poisoned, or fooled, each with a code-level documented defense.
+
+> A judge or enterprise buyer reading this document should not find a single failure mode that ends with "we hope this doesn't happen."
+
+See [`docs/adversarial_scenarios.md`](./docs/adversarial_scenarios.md) — covering source poisoning, prompt injection, stale data surfacing, domain impersonation, and more.
+
+---
+
+## Configuration Reference
 
 | Env Var | Default | Description |
-| :--- | :--- | :--- |
+|:---|:---|:---|
 | `LINKUP_API_KEY` | — | Required for live mode |
 | `OPENAI_API_KEY` | — | Required if not using AI Gateway |
 | `VERCEL_AI_GATEWAY_API_KEY` | — | Preferred — adds caching + observability |
-| `AI_MODEL` | `gpt-4o-mini` | Synthesis model · upgrade to `gpt-4.1` for board-grade |
+| `AI_MODEL` | `gpt-4o-mini` | Upgrade to `gpt-4.1` for board-grade depth |
 | `NEXT_PUBLIC_BASE_URL` | `http://localhost:3000` | Public origin for share links |
-| `SYNTRA_DEMO_MODE` | `false` | When `true` · routes all Linkup + AI calls to fixtures |
-
----
-
-## Troubleshooting
-
-| Issue | Solution |
-| :--- | :--- |
-| **"LINKUP_API_KEY is not set"** | Copy `.env.example` to `.env.local` and add your key — or run `npm run demo:dev` to skip live mode. |
-| **Engine stuck on `running`** | Engines time out individually; refresh the dashboard after 5 min — the orchestrator marks them `failed` with the original error. |
-| **Share link 404** | Reports live in-memory only; restart the dev server and the Twin is gone. Hook up Postgres for persistence. |
-| **PDF chips never appear** | The target domain's search results returned no `.pdf` URLs in the top results. Try a public company with SEC filings (e.g. `microsoft.com`). |
-| **Demo mode shows "real" delay** | That's the `simulatedDelay` shim mimicking 200–600ms network latency. Toggle it off in `src/lib/demo/demo_backend.ts`. |
-
----
-
-## Advanced Use Cases
-
-### 1. Diffing a Twin Across Snapshots
-
-**Scenario:** *"Did Stripe's pricing posture shift this quarter?"*
-
-Because a Twin is JSON, you can snapshot it on a cron, then `diff` last quarter's `engines.commercial.data.plgSignals[]` against this quarter's. The **Sentinel** demo scenario (Easter egg #3) shows exactly this — a banner fires when a PLG signal regresses.
-
-### 2. Two-Twin Debate (Side-by-Side)
-
-**Scenario:** *"Is Stripe or Figma the better platform bet?"*
-
-Navigate to `/compare?a=demo-stripe&b=demo-figma`. The compare view renders both Twins' executive summaries, risk radars, and engine outputs in adjacent columns — useful for portfolio construction and competitive positioning calls.
-
-### 3. Primary-Source PDF Citations
-
-**Scenario:** *"Show me Stripe's audit opinion verbatim."*
-
-The Annual Report engine resolves the most recent 10-K PDF via Linkup `/search`, then pipes it through `/fetch` (which accepts PDFs up to 20 MB). The resulting markdown is parsed for revenue, audit opinion, and key risk factors — and the citation in the dashboard renders with a green **PDF** chip so an analyst can click straight into the source filing.
-
-### 4. Adversarial Red-Flag Triage
-
-**Scenario:** *"Is this company real?"*
-
-For `acme-batteries.in`, the **Red Flags** engine (via Linkup `/research` investigate mode) cross-references Udyam registration data, MCA filings, news mentions, and employee claims. When facts contradict, the Twin's verdict drops to **Pass** and the offending citations render in red — Syntra's **Verifier** in action.
-
-### 5. Headless Pipeline Integration
-
-**Scenario:** *"Run a Twin on every company in our deal-flow queue."*
-
-The `/api/report/create` endpoint is idempotent and stateless. Pipe a CSV of domains, kick off Twins in parallel, poll `/api/report/[id]` for status, and ingest the completed JSON into your CRM or actuarial model. The in-memory store is intentionally swappable — replace `reports.ts` with a Postgres adapter and you have a production data plane.
-
----
-
-## Deployment
-
-### Vercel (Recommended)
-
-```bash
-vercel deploy
-```
-
-Set the four required env vars in the Vercel dashboard:
-
-```
-LINKUP_API_KEY              = lk_live_...
-VERCEL_AI_GATEWAY_API_KEY   = ...
-NEXT_PUBLIC_BASE_URL        = https://your-project.vercel.app
-AI_MODEL                    = gpt-4o-mini
-```
-
-See [`DEPLOYMENT_CHECKLIST.md`](./DEPLOYMENT_CHECKLIST.md) for the full pre-flight (build, types, lint, smoke tests, post-deploy verification).
-
-### Self-Hosted
-
-```bash
-npm run build
-npm start
-```
-
-The production server respects `PORT` (default `3000`) and works behind any reverse proxy.
+| `SYNTRA_DEMO_MODE` | `false` | Routes all Linkup + AI calls to fixtures |
 
 ---
 
 ## Gallery
 
 <p align="center">
-  <img src="public/screenshots/03-dashboard-stripe.png" width="49%" alt="Stripe.com Twin — Full Dashboard" />
+  <img src="public/screenshots/03-dashboard-stripe.png" width="49%" alt="Stripe Twin — Full Dashboard" />
   <img src="public/screenshots/05-dashboard-acme.png" width="49%" alt="Acme Batteries — Full Dashboard" />
 </p>
 
 <p align="center">
-  <img src="public/screenshots/04-dashboard-figma.png" width="49%" alt="Figma.com Twin — Full Dashboard" />
-  <img src="public/screenshots/07-share-stripe.png" width="49%" alt="Stripe.com — Public Share View" />
+  <img src="public/screenshots/04-dashboard-figma.png" width="49%" alt="Figma Twin — Full Dashboard" />
+  <img src="public/screenshots/07-share-stripe.png" width="49%" alt="Stripe — Public Share View" />
 </p>
 
 <p align="center">
@@ -507,33 +488,38 @@ The production server respects `PORT` (default `3000`) and works behind any reve
 
 ---
 
-## Contributing
+## Advanced Use Cases
 
-This is a hackathon submission, but contributions are welcome — especially around:
+**Diffing a Twin across snapshots** — Because a Twin is JSON, snapshot it on a cron, then diff last quarter's `engines.commercial.data.plgSignals[]` against this quarter's. The Sentinel Easter egg (#3) shows exactly this.
 
-- **New engines** — any analyst dimension that can be expressed as a `(domain) => { data, sources }` function fits the contract
-- **Verifier improvements** — the prompt-injection sanitizer and citation-contradiction detector both have room for ML upgrades
-- **Persistence adapters** — Postgres, Redis, S3-snapshot exports
-- **Diff & alert tooling** — Sentinel is currently a demo banner; a real cron + webhook would be production-grade
+**Side-by-side debate** — Navigate to `/compare?a=demo-stripe&b=demo-figma`. Both Twins' radars, summaries, and engine outputs render in adjacent columns — useful for portfolio construction calls.
 
-1. **Fork** the repository
-2. **Create** a feature branch (`git checkout -b feat/your-engine`)
-3. **Commit** with conventional-commit style (`git commit -m "feat(engines): add patent-portfolio engine"`)
-4. **Push** to your fork (`git push origin feat/your-engine`)
-5. **Open** a Pull Request
+**Headless pipeline** — POST a CSV of domains to `/api/report/create`, poll `/api/report/[id]`, ingest completed JSON into your CRM or actuarial model. Replace `reports.ts` with a Postgres adapter for a production data plane.
+
+---
+
+## Deployment
+
+```bash
+# Vercel (recommended)
+vercel deploy
+
+# Self-hosted
+npm run build && npm start
+```
+
+Set four env vars in the Vercel dashboard: `LINKUP_API_KEY`, `VERCEL_AI_GATEWAY_API_KEY`, `NEXT_PUBLIC_BASE_URL`, `AI_MODEL`. See [`DEPLOYMENT_CHECKLIST.md`](./DEPLOYMENT_CHECKLIST.md) for the full pre-flight.
 
 ---
 
 <div align="center">
 
-## Author
+**Built by [Keerthivasan S V](https://github.com/Keerthivasan-Venkitajalam) · Coimbatore, India · 96 hours**
 
-**Keerthivasan S V** — [@Keerthivasan-Venkitajalam](https://github.com/Keerthivasan-Venkitajalam)
+Linkup Async Hackathon · May 2026
 
-**Syntra** is an experimental due-diligence platform built for the **Linkup Async Hackathon — May 2026**.
+[Live Product](https://syntra-six-delta.vercel.app) · [Video Demo](https://youtu.be/ytnakM-U1aM) · [Report Bug](https://github.com/Keerthivasan-Venkitajalam/syntra/issues)
 
-[Report Bug](https://github.com/Keerthivasan-Venkitajalam/syntra/issues) • [Request Feature](https://github.com/Keerthivasan-Venkitajalam/syntra/issues)
-
-Built with [Linkup](https://linkup.so), [Next.js](https://nextjs.org), and the [Vercel AI Gateway](https://vercel.com/ai).
+*Due diligence used to take 3 weeks. Now it's a URL.*
 
 </div>

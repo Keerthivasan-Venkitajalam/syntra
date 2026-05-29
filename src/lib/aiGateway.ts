@@ -16,7 +16,11 @@ export async function runGatewayJson<T>(params: {
   const openaiKey = process.env.OPENAI_API_KEY;
 
   const apiKey = gatewayKey || openaiKey;
-  if (!apiKey) return null;
+  if (!apiKey) {
+    throw new Error(
+      "No AI API key configured. Set OPENAI_API_KEY or VERCEL_AI_GATEWAY_API_KEY in .env.local"
+    );
+  }
 
   const url = gatewayKey
     ? (process.env.VERCEL_AI_GATEWAY_URL ??
@@ -47,13 +51,16 @@ export async function runGatewayJson<T>(params: {
     }),
   });
 
-  if (!response.ok) return null;
+  if (!response.ok) {
+    const msg = await response.text().catch(() => String(response.status));
+    throw new Error(`AI gateway error ${response.status}: ${msg}`);
+  }
 
   const payload = (await response.json()) as {
     choices?: Array<{ message?: { content?: string } }>;
   };
   const content = payload.choices?.[0]?.message?.content;
-  if (!content) return null;
+  if (!content) throw new Error("AI gateway returned empty content");
 
   try {
     const cleaned = content
@@ -62,6 +69,6 @@ export async function runGatewayJson<T>(params: {
       .trim();
     return JSON.parse(cleaned) as T;
   } catch {
-    return null;
+    throw new Error("AI gateway returned invalid JSON");
   }
 }

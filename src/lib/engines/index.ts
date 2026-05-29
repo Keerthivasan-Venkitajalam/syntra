@@ -36,12 +36,12 @@ export async function runTeaser(domain: string) {
     schemaHint,
   });
 
+  if (!aiOutput) throw new Error("AI synthesis returned no output — check AI gateway key");
+
   return {
-    summary:
-      aiOutput?.summary ??
-      `Initial overview for ${domain} based on public sources.`,
-    plgOrSlg: aiOutput?.plgOrSlg ?? "Unknown",
-    techSignals: aiOutput?.techSignals ?? [],
+    summary: aiOutput.summary,
+    plgOrSlg: aiOutput.plgOrSlg ?? "Unknown",
+    techSignals: aiOutput.techSignals ?? [],
     sources,
   };
 }
@@ -79,15 +79,17 @@ export async function runCommercial(domain: string) {
   });
 
   return {
-    data: {
-      plgSignals: aiOutput?.plgSignals ?? [],
-      slgSignals: aiOutput?.slgSignals ?? [],
-      pricingVisibility: aiOutput?.pricingVisibility ?? "Unknown",
-      signupFlow: aiOutput?.signupFlow ?? "Unknown",
-      freeTrial: aiOutput?.freeTrial ?? "Unknown",
-      pricingTiers: aiOutput?.pricingTiers ?? [],
-      notes: aiOutput?.notes ?? "No additional signals found.",
-    },
+    data: aiOutput
+      ? {
+          plgSignals: aiOutput.plgSignals ?? [],
+          slgSignals: aiOutput.slgSignals ?? [],
+          pricingVisibility: aiOutput.pricingVisibility ?? "Unknown",
+          signupFlow: aiOutput.signupFlow ?? "Unknown",
+          freeTrial: aiOutput.freeTrial ?? "Unknown",
+          pricingTiers: aiOutput.pricingTiers ?? [],
+          notes: aiOutput.notes ?? "",
+        }
+      : null,
     sources,
   };
 }
@@ -125,15 +127,17 @@ export async function runTechnical(domain: string) {
   });
 
   return {
-    data: {
-      languages: aiOutput?.languages ?? [],
-      cloud: aiOutput?.cloud ?? [],
-      databases: aiOutput?.databases ?? [],
-      vendors: aiOutput?.vendors ?? [],
-      openSource: aiOutput?.openSource ?? "Unknown",
-      techDebtSignals: aiOutput?.techDebtSignals ?? [],
-      notes: aiOutput?.notes ?? "No verified stack signals found.",
-    },
+    data: aiOutput
+      ? {
+          languages: aiOutput.languages ?? [],
+          cloud: aiOutput.cloud ?? [],
+          databases: aiOutput.databases ?? [],
+          vendors: aiOutput.vendors ?? [],
+          openSource: aiOutput.openSource ?? "Unknown",
+          techDebtSignals: aiOutput.techDebtSignals ?? [],
+          notes: aiOutput.notes ?? "",
+        }
+      : null,
     sources,
   };
 }
@@ -199,18 +203,16 @@ export async function runEsg(domain: string) {
   });
 
   return {
-    data: {
-      sustainabilityReport: aiOutput?.sustainabilityReport ?? null,
-      emissions: aiOutput?.emissions ?? {
-        scope1: null,
-        scope2: null,
-        scope3: null,
-      },
-      deiInitiatives: aiOutput?.deiInitiatives ?? [],
-      supplierRisks: aiOutput?.supplierRisks ?? [],
-      esgRating: aiOutput?.esgRating ?? null,
-      notes: aiOutput?.notes ?? "No ESG disclosures found.",
-    },
+    data: aiOutput
+      ? {
+          sustainabilityReport: aiOutput.sustainabilityReport ?? null,
+          emissions: aiOutput.emissions ?? { scope1: null, scope2: null, scope3: null },
+          deiInitiatives: aiOutput.deiInitiatives ?? [],
+          supplierRisks: aiOutput.supplierRisks ?? [],
+          esgRating: aiOutput.esgRating ?? null,
+          notes: aiOutput.notes ?? "",
+        }
+      : null,
     sources,
     pdfSources: pdfSources.length > 0 ? pdfSources : undefined,
   };
@@ -247,13 +249,15 @@ export async function runAiAct(domain: string) {
   });
 
   return {
-    data: {
-      aiFeatures: aiOutput?.aiFeatures ?? [],
-      governanceSignals: aiOutput?.governanceSignals ?? [],
-      riskTier: aiOutput?.riskTier ?? "Unknown",
-      missingDisclosures: aiOutput?.missingDisclosures ?? [],
-      notes: aiOutput?.notes ?? "No AI compliance disclosures found.",
-    },
+    data: aiOutput
+      ? {
+          aiFeatures: aiOutput.aiFeatures ?? [],
+          governanceSignals: aiOutput.governanceSignals ?? [],
+          riskTier: aiOutput.riskTier ?? "Unknown",
+          missingDisclosures: aiOutput.missingDisclosures ?? [],
+          notes: aiOutput.notes ?? "",
+        }
+      : null,
     sources,
   };
 }
@@ -294,14 +298,16 @@ export async function runCompetitors(domain: string) {
   });
 
   return {
-    data: {
-      directCompetitors: aiOutput?.directCompetitors ?? [],
-      indirectCompetitors: aiOutput?.indirectCompetitors ?? [],
-      marketPosition: aiOutput?.marketPosition ?? "Unknown",
-      differentiators: aiOutput?.differentiators ?? [],
-      moatStrength: aiOutput?.moatStrength ?? "Unknown",
-      notes: aiOutput?.notes ?? "No competitive data found.",
-    },
+    data: aiOutput
+      ? {
+          directCompetitors: aiOutput.directCompetitors ?? [],
+          indirectCompetitors: aiOutput.indirectCompetitors ?? [],
+          marketPosition: aiOutput.marketPosition ?? "Unknown",
+          differentiators: aiOutput.differentiators ?? [],
+          moatStrength: aiOutput.moatStrength ?? "Unknown",
+          notes: aiOutput.notes ?? "",
+        }
+      : null,
     sources,
   };
 }
@@ -336,16 +342,18 @@ export async function runRedFlags(domain: string) {
   });
 
   return {
-    data: {
-      dealBreakers: aiOutput?.dealBreakers ?? [],
-      warnings: aiOutput?.warnings ?? [],
-      lawsuits: aiOutput?.lawsuits ?? [],
-      dataBreaches: aiOutput?.dataBreaches ?? [],
-      layoffs: aiOutput?.layoffs ?? null,
-      regulatoryActions: aiOutput?.regulatoryActions ?? [],
-      overallSeverity: aiOutput?.overallSeverity ?? "Unknown",
-      notes: aiOutput?.notes ?? "No red flags surfaced.",
-    },
+    data: aiOutput
+      ? {
+          dealBreakers: aiOutput.dealBreakers ?? [],
+          warnings: aiOutput.warnings ?? [],
+          lawsuits: aiOutput.lawsuits ?? [],
+          dataBreaches: aiOutput.dataBreaches ?? [],
+          layoffs: aiOutput.layoffs ?? null,
+          regulatoryActions: aiOutput.regulatoryActions ?? [],
+          overallSeverity: aiOutput.overallSeverity ?? "Unknown",
+          notes: aiOutput.notes ?? "",
+        }
+      : null,
     sources,
     deepResearch: true,
   };
@@ -414,17 +422,19 @@ export async function runFinancial(domain: string) {
   });
 
   return {
-    data: {
-      fundingRounds: aiOutput?.fundingRounds ?? [],
-      totalFunding: aiOutput?.totalFunding ?? null,
-      latestValuation: aiOutput?.latestValuation ?? null,
-      revenueEstimate: aiOutput?.revenueEstimate ?? null,
-      growthRate: aiOutput?.growthRate ?? null,
-      profitability: aiOutput?.profitability ?? "Unknown",
-      ipoStatus: aiOutput?.ipoStatus ?? "Unknown",
-      burnRate: aiOutput?.burnRate ?? null,
-      notes: aiOutput?.notes ?? "No financial data found.",
-    },
+    data: aiOutput
+      ? {
+          fundingRounds: aiOutput.fundingRounds ?? [],
+          totalFunding: aiOutput.totalFunding ?? null,
+          latestValuation: aiOutput.latestValuation ?? null,
+          revenueEstimate: aiOutput.revenueEstimate ?? null,
+          growthRate: aiOutput.growthRate ?? null,
+          profitability: aiOutput.profitability ?? "Unknown",
+          ipoStatus: aiOutput.ipoStatus ?? "Unknown",
+          burnRate: aiOutput.burnRate ?? null,
+          notes: aiOutput.notes ?? "",
+        }
+      : null,
     sources,
     pdfSources: pdfSources.length > 0 ? pdfSources : undefined,
   };
@@ -468,16 +478,18 @@ export async function runLeadership(domain: string) {
   });
 
   return {
-    data: {
-      keyExecutives: aiOutput?.keyExecutives ?? [],
-      founderLed: aiOutput?.founderLed ?? "Unknown",
-      teamSize: aiOutput?.teamSize ?? null,
-      glassdoorRating: aiOutput?.glassdoorRating ?? null,
-      cultureSignals: aiOutput?.cultureSignals ?? [],
-      hiringVelocity: aiOutput?.hiringVelocity ?? "Unknown",
-      keyPersonRisk: aiOutput?.keyPersonRisk ?? "Unknown",
-      notes: aiOutput?.notes ?? "No leadership data found.",
-    },
+    data: aiOutput
+      ? {
+          keyExecutives: aiOutput.keyExecutives ?? [],
+          founderLed: aiOutput.founderLed ?? "Unknown",
+          teamSize: aiOutput.teamSize ?? null,
+          glassdoorRating: aiOutput.glassdoorRating ?? null,
+          cultureSignals: aiOutput.cultureSignals ?? [],
+          hiringVelocity: aiOutput.hiringVelocity ?? "Unknown",
+          keyPersonRisk: aiOutput.keyPersonRisk ?? "Unknown",
+          notes: aiOutput.notes ?? "",
+        }
+      : null,
     sources,
   };
 }
@@ -514,17 +526,19 @@ export async function runMarketSizing(domain: string) {
   });
 
   return {
-    data: {
-      industry: aiOutput?.industry ?? "Unknown",
-      tam: aiOutput?.tam ?? null,
-      sam: aiOutput?.sam ?? null,
-      som: aiOutput?.som ?? null,
-      cagr: aiOutput?.cagr ?? null,
-      marketTrends: aiOutput?.marketTrends ?? [],
-      tailwinds: aiOutput?.tailwinds ?? [],
-      headwinds: aiOutput?.headwinds ?? [],
-      notes: aiOutput?.notes ?? "No market data found.",
-    },
+    data: aiOutput
+      ? {
+          industry: aiOutput.industry ?? "Unknown",
+          tam: aiOutput.tam ?? null,
+          sam: aiOutput.sam ?? null,
+          som: aiOutput.som ?? null,
+          cagr: aiOutput.cagr ?? null,
+          marketTrends: aiOutput.marketTrends ?? [],
+          tailwinds: aiOutput.tailwinds ?? [],
+          headwinds: aiOutput.headwinds ?? [],
+          notes: aiOutput.notes ?? "",
+        }
+      : null,
     sources,
   };
 }
@@ -579,16 +593,15 @@ export async function runExecutiveSummary(report: Report) {
 }
 
 export function calculateRiskScores(report: Report) {
-  const score = (engine: { status: string; data: Record<string, unknown> | null }) => {
-    if (engine.status !== "completed" || !engine.data) return 50;
-    return 50;
-  };
+  // Baseline: 50 if engine completed with data, 35 if failed/missing (uncertainty penalty).
+  const baseline = (engine: { status: string; data: Record<string, unknown> | null }) =>
+    engine.status === "completed" && engine.data ? 50 : 35;
 
-  let commercial = score(report.engines.commercial);
-  let technical = score(report.engines.technical);
-  let esg = score(report.engines.esg);
-  let regulatory = score(report.engines.aiAct);
-  let competitive = score(report.engines.competitors);
+  let commercial = baseline(report.engines.commercial);
+  let technical = baseline(report.engines.technical);
+  let esg = baseline(report.engines.esg);
+  let regulatory = baseline(report.engines.aiAct);
+  let competitive = baseline(report.engines.competitors);
 
   const cd = report.engines.commercial.data as Record<string, unknown> | null;
   if (cd) {
@@ -668,7 +681,7 @@ export function calculateRiskScores(report: Report) {
     regulatory = Math.max(10, regulatory);
   }
 
-  let financial = score(report.engines.financial);
+  let financial = baseline(report.engines.financial);
   const fd = report.engines.financial.data as Record<string, unknown> | null;
   if (fd) {
     if (fd.totalFunding) financial += 10;
@@ -682,7 +695,7 @@ export function calculateRiskScores(report: Report) {
     financial = Math.max(15, Math.min(financial, 95));
   }
 
-  let leadership = score(report.engines.leadership);
+  let leadership = baseline(report.engines.leadership);
   const ld = report.engines.leadership.data as Record<string, unknown> | null;
   if (ld) {
     if (ld.founderLed === "Yes") leadership += 10;
@@ -803,20 +816,22 @@ export async function runAnnualReport(domain: string) {
   });
 
   return {
-    data: {
-      documentTitle: aiOutput?.documentTitle ?? documentTitle,
-      documentUrl,
-      revenue: aiOutput?.revenue ?? null,
-      netIncome: aiOutput?.netIncome ?? null,
-      totalAssets: aiOutput?.totalAssets ?? null,
-      keyRisks: aiOutput?.keyRisks ?? [],
-      keyOpportunities: aiOutput?.keyOpportunities ?? [],
-      auditOpinion: aiOutput?.auditOpinion ?? null,
-      fiscalYear: aiOutput?.fiscalYear ?? null,
-      highlights: aiOutput?.highlights ?? [],
-    },
+    data: aiOutput
+      ? {
+          documentTitle: aiOutput.documentTitle ?? documentTitle,
+          documentUrl,
+          revenue: aiOutput.revenue ?? null,
+          netIncome: aiOutput.netIncome ?? null,
+          totalAssets: aiOutput.totalAssets ?? null,
+          keyRisks: aiOutput.keyRisks ?? [],
+          keyOpportunities: aiOutput.keyOpportunities ?? [],
+          auditOpinion: aiOutput.auditOpinion ?? null,
+          fiscalYear: aiOutput.fiscalYear ?? null,
+          highlights: aiOutput.highlights ?? [],
+        }
+      : null,
     sources,
     pdfSources: pdfSources.length > 0 ? pdfSources : undefined,
-    deepResearch: !pdfContent, // true when fell back to /research
+    deepResearch: !pdfContent,
   };
 }
