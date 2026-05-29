@@ -300,7 +300,7 @@ Each scenario is deterministic, replayable, and offline-safe — exactly what a 
 | **Real API calls** | Linkup dashboard shows $0.514 remaining from initial credits — not mocked, not faked |
 | **3 complete Twins** | Stripe (82/BUY, 22 sources), Figma (76/BUY, 24 sources), Acme (28/PASS, fraud detected) |
 | **Fraud catch** | Acme Batteries: Udyam mismatch + MCA incorporation contradiction — surfaced by `/research` |
-| **Built solo** | One developer, Coimbatore, India, 96 hours |
+| **Built solo** | One developer, Coimbatore, India, weekends of May 2026 |
 | **Public source** | [github.com/Keerthivasan-Venkitajalam/syntra](https://github.com/Keerthivasan-Venkitajalam/syntra) |
 | **Video demo** | [youtu.be/ytnakM-U1aM](https://youtu.be/ytnakM-U1aM) — 6m 30s narrated walkthrough |
 
@@ -514,7 +514,7 @@ Set four env vars in the Vercel dashboard: `LINKUP_API_KEY`, `VERCEL_AI_GATEWAY_
 
 <div align="center">
 
-**Built by [Keerthivasan S V](https://github.com/Keerthivasan-Venkitajalam) · Coimbatore, India · 96 hours**
+**Built by [Keerthivasan S V](https://github.com/Keerthivasan-Venkitajalam) · Coimbatore, India · weekends of May 2026**
 
 Linkup Async Hackathon · May 2026
 

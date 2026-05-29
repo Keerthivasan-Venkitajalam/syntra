@@ -55,7 +55,7 @@ const featuredTwins = [
 
 const accolades = [
   {
-    tag: "Built in 96 hours",
+    tag: "Built on weekends of May",
     title: "Linkup Async Hackathon — May 2026",
     body: "Ten parallel intelligence engines, source-cited synthesis, PDF /fetch + /research deep dive, live diff alerts.",
   },
