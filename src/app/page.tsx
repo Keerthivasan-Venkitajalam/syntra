@@ -66,7 +66,7 @@ const accolades = [
   },
   {
     tag: "Open architecture",
-    title: "AI Gateway + Linkup + Next.js 16",
+    title: "AI Gateway + Linkup + Next.js 15",
     body: "Linkup /search, /research, /fetch (PDF-capable) wired through Vercel AI Gateway. Edge-deployable, fully typed.",
   },
 ];
@@ -78,7 +78,7 @@ const stack = [
   },
   {
     h: "Frontend",
-    items: ["Next.js 16 (App Router)", "React 18 + RSC", "Tailwind v4", "Instrument Serif + Geist", "Remotion (demo video)"],
+    items: ["Next.js 15 (App Router)", "React 19 + RSC", "Tailwind v4", "Instrument Serif + Geist"],
   },
   {
     h: "Infrastructure",
@@ -122,7 +122,7 @@ export default function Home() {
               <span>syntra</span>
               <span className="status">
                 <span className="pulse-dot" />
-                Live · Demo Mode
+                {process.env.NEXT_PUBLIC_SYNTRA_DEMO_MODE === "true" ? "Live · Demo Mode" : "Live"}
               </span>
             </div>
 

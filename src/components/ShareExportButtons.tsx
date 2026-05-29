@@ -131,7 +131,7 @@ export function ShareExportButtons({
       body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;max-width:800px;margin:0 auto;padding:40px 24px;color:#1a1a1a;font-size:14px;line-height:1.6}
       @media print{body{padding:20px}}</style></head><body>
       <div style="display:flex;align-items:center;gap:12px;margin-bottom:8px">
-        <div style="width:36px;height:36px;background:#4f46e5;color:white;display:flex;align-items:center;justify-content:center;border-radius:8px;font-size:12px;font-weight:bold">AX</div>
+        <div style="width:36px;height:36px;display:flex;align-items:center;justify-content:center;border-radius:8px;overflow:hidden"><img src="http://localhost:3000/logo-nav.png" alt="S" style="width:36px;height:36px;object-fit:cover" /></div>
         <div><strong style="font-size:18px">Syntra</strong> <span style="color:#888">Due Diligence Report</span></div>
       </div>
       <h1 style="font-size:28px;margin:16px 0 4px 0">${report.domain}</h1>

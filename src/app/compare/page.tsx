@@ -36,6 +36,8 @@ function CompareContent() {
   const [domainB, setDomainB] = useState("");
   const [loadingA, setLoadingA] = useState(false);
   const [loadingB, setLoadingB] = useState(false);
+  const [errorA, setErrorA] = useState<string | null>(null);
+  const [errorB, setErrorB] = useState<string | null>(null);
 
   const fetchReport = useCallback(
     async (id: string, setter: (r: Report) => void) => {
@@ -53,9 +55,14 @@ function CompareContent() {
   const createReport = async (
     domain: string,
     setter: (r: Report) => void,
-    setLoading: (b: boolean) => void
+    setLoading: (b: boolean) => void,
+    setError: (e: string | null) => void = () => {}
   ) => {
-    if (!domain.trim()) return;
+    if (!domain.trim()) {
+      setError("Enter a company domain.");
+      return;
+    }
+    setError(null);
     setLoading(true);
     const res = await fetch("/api/report/create", {
       method: "POST",
@@ -63,6 +70,8 @@ function CompareContent() {
       body: JSON.stringify({ domain }),
     });
     if (!res.ok) {
+      const errBody = await res.json().catch(() => ({}));
+      setError(errBody.error ?? "Request failed. Please try again.");
       setLoading(false);
       return;
     }
@@ -105,9 +114,9 @@ function CompareContent() {
       {!idA && !idB && (
         <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 16, marginBottom: 32 }}>
           {[
-            { label: "Company A", val: domainA, set: setDomainA, run: () => createReport(domainA, setReportA, setLoadingA), loading: loadingA, rep: reportA, ph: "stripe.com" },
-            { label: "Company B", val: domainB, set: setDomainB, run: () => createReport(domainB, setReportB, setLoadingB), loading: loadingB, rep: reportB, ph: "figma.com" },
-          ].map(({ label, val, set, run, loading, rep, ph }) => (
+            { label: "Company A", val: domainA, set: setDomainA, run: () => createReport(domainA, setReportA, setLoadingA, setErrorA), loading: loadingA, rep: reportA, ph: "stripe.com", error: errorA },
+            { label: "Company B", val: domainB, set: setDomainB, run: () => createReport(domainB, setReportB, setLoadingB, setErrorB), loading: loadingB, rep: reportB, ph: "figma.com", error: errorB },
+          ].map(({ label, val, set, run, loading, rep, ph, error }) => (
             <div key={label} style={{ padding: "20px 24px", borderRadius: 12, border: "1px solid var(--rule)", background: "var(--paper-2)" }}>
               <p style={{ fontFamily: "var(--t-mono)", fontSize: 11, color: "var(--muted)", letterSpacing: "0.1em", textTransform: "uppercase", marginBottom: 12 }}>{label}</p>
               <div style={{ display: "flex", gap: 8 }}>
@@ -131,6 +140,11 @@ function CompareContent() {
                   }}
                 >{loading ? "Running…" : "Analyse"}</button>
               </div>
+              {error && (
+                <p style={{ fontFamily: "var(--t-mono)", fontSize: 12, color: "var(--red, #ef4444)", marginTop: 8 }}>
+                  {error}
+                </p>
+              )}
               {rep && <p style={{ marginTop: 8, fontFamily: "var(--t-mono)", fontSize: 11, color: "var(--green)" }}>{rep.domain} — {rep.status}{rep.riskScores ? ` · ${rep.riskScores.overall}` : ""}</p>}
             </div>
           ))}

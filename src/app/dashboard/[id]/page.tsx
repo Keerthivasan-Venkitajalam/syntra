@@ -366,7 +366,9 @@ function AnnualReportCard({ engine }: { engine: Report["engines"]["annualReport"
 // Forward-declare LoadingPulse helper for AnnualReportCard
 function LoadingPulseInner({ label }: { label: string }) {
   return (
-    <div style={{ padding: "32px", borderRadius: 14, border: "1px solid var(--rule)", background: "var(--paper-2)", textAlign: "center" }}>
+    <>
+      <style>{`@keyframes bounce{0%,80%,100%{transform:translateY(0)}40%{transform:translateY(-8px)}}`}</style>
+      <div style={{ padding: "32px", borderRadius: 14, border: "1px solid var(--rule)", background: "var(--paper-2)", textAlign: "center" }}>
       <p style={{ fontFamily: "var(--t-mono)", fontSize: 12, color: "var(--muted)", letterSpacing: "0.08em", marginBottom: 14 }}>{label}</p>
       <div style={{ display: "flex", justifyContent: "center", gap: 6 }}>
         {[0, 1, 2].map(i => (
@@ -378,6 +380,7 @@ function LoadingPulseInner({ label }: { label: string }) {
         ))}
       </div>
     </div>
+    </>
   );
 }
 

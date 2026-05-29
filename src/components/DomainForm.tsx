@@ -60,20 +60,36 @@ export function DomainForm() {
           placeholder="example.com"
           value={domain}
           onChange={(event) => setDomain(event.target.value)}
-          className="w-full rounded-xl border border-white/10 bg-black/30 px-4 py-3 text-sm text-white outline-none transition placeholder:text-zinc-500 focus:border-blue-400 focus:ring-2 focus:ring-blue-500/30"
+          style={{
+            flex: 1, padding: "11px 16px", borderRadius: 10,
+            border: `1px solid ${error ? "var(--red)" : "var(--rule-strong)"}`,
+            background: "var(--paper)", color: "var(--ink)",
+            fontFamily: "var(--t-mono)", fontSize: 14, outline: "none",
+            transition: "border-color .2s",
+          }}
         />
         {/* Easter egg: long-press submit → Udyam red flag scenario */}
         <EasterEggDetector longPress onActivate={handleUdyamEgg}>
           <button
             type="submit"
-            className="rounded-xl bg-gradient-to-r from-blue-500 via-blue-600 to-indigo-500 px-5 py-3 text-sm font-semibold text-white shadow-lg shadow-blue-500/20 transition hover:opacity-90 disabled:cursor-not-allowed disabled:opacity-60"
             disabled={loading}
+            style={{
+              padding: "11px 24px", borderRadius: 10,
+              background: loading ? "var(--paper-3)" : "var(--accent)",
+              color: loading ? "var(--muted)" : "var(--paper)",
+              border: "none", fontFamily: "var(--t-mono)", fontSize: 13,
+              fontWeight: 700, cursor: loading ? "not-allowed" : "pointer",
+              letterSpacing: "0.04em", whiteSpace: "nowrap",
+              transition: "background .2s, opacity .2s",
+            }}
           >
-            {loading ? "Running..." : "Run Diligence"}
+            {loading ? "Running…" : "Run Diligence →"}
           </button>
         </EasterEggDetector>
       </div>
-      {error ? <p className="text-sm text-red-400">{error}</p> : null}
+      {error ? (
+        <p style={{ fontFamily: "var(--t-mono)", fontSize: 12, color: "var(--red)" }}>{error}</p>
+      ) : null}
     </form>
   );
 }
