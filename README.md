@@ -1,25 +1,30 @@
 <div align="center">
 
-<img src="public/logo.png" width="280" alt="Syntra Logo" />
+<img src="public/logo-icon.png" width="120" alt="Syntra" />
 
 # Syntra
 
-### Synthetic Diligence Twins for Modern M&A
+### Intelligence Twins for Modern M&A
 
-**Drop a domain. Get a living, source-cited, diffable intelligence Twin in minutes.**
+**Drop a domain. Syntra fires 10 parallel intelligence engines and delivers a living, source-cited, diffable company Twin in under 5 minutes.**
 
-[![Version](https://img.shields.io/badge/version-0.1.0-blue.svg?style=for-the-badge)](https://github.com/Keerthivasan-Venkitajalam/syntra)
-[![License](https://img.shields.io/badge/license-MIT-green.svg?style=for-the-badge)](LICENSE)
-[![Next.js](https://img.shields.io/badge/Next.js-16.2-black?style=for-the-badge&logo=next.js)](https://nextjs.org)
-[![React](https://img.shields.io/badge/React-19.2-149ECA?style=for-the-badge&logo=react)](https://react.dev)
-[![Linkup-Powered](https://img.shields.io/badge/Search-Linkup-E8944A?style=for-the-badge)](https://linkup.so)
-[![Vercel AI Gateway](https://img.shields.io/badge/Synthesis-Vercel_AI_Gateway-000000?style=for-the-badge&logo=vercel)](https://vercel.com/ai)
+<br/>
+
+[![Live Demo](https://img.shields.io/badge/🔴%20Live%20Demo-syntra.vercel.app-E8944A?style=for-the-badge)](https://syntra-steel.vercel.app)
+[![Linkup Hackathon](https://img.shields.io/badge/Linkup%20Async%20Hackathon-May%202026-6366f1?style=for-the-badge)](https://linkup.so)
+[![License](https://img.shields.io/badge/license-MIT-22c55e?style=for-the-badge)](LICENSE)
+
+[![Next.js](https://img.shields.io/badge/Next.js-16.2-black?style=flat-square&logo=next.js)](https://nextjs.org)
+[![React](https://img.shields.io/badge/React-19-149ECA?style=flat-square&logo=react)](https://react.dev)
+[![TypeScript](https://img.shields.io/badge/TypeScript-5.4-3178C6?style=flat-square&logo=typescript)](https://typescriptlang.org)
+[![Linkup](https://img.shields.io/badge/Powered%20by-Linkup-E8944A?style=flat-square)](https://linkup.so)
+[![Vercel](https://img.shields.io/badge/Deployed%20on-Vercel-000000?style=flat-square&logo=vercel)](https://vercel.com)
+
+<br/>
 
 [About](#about-the-project) • [How We Used Linkup](#how-we-used-linkup-in-syntra) • [Architecture](#system-architecture) • [Tech Stack](#tech-stack) • [Engines](#the-ten-intelligence-engines) • [Getting Started](#getting-started) • [Demo Mode](#demo-mode--easter-eggs)
 
 <br/>
-
-### Built for the Linkup Async Hackathon — May 2026
 
 ![Syntra Landing Page](public/screenshots/01-landing-hero.png)
 
