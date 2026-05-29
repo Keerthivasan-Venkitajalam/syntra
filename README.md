@@ -10,7 +10,7 @@
 
 <br/>
 
-[![Live Demo](https://img.shields.io/badge/🔴%20Live%20Demo-syntra.vercel.app-E8944A?style=for-the-badge)](https://syntra-steel.vercel.app)
+[![Live Demo](https://img.shields.io/badge/🔴%20Live%20Demo-syntra.vercel.app-E8944A?style=for-the-badge)](https://syntra-six-delta.vercel.app)
 [![Linkup Hackathon](https://img.shields.io/badge/Linkup%20Async%20Hackathon-May%202026-6366f1?style=for-the-badge)](https://linkup.so)
 [![License](https://img.shields.io/badge/license-MIT-22c55e?style=for-the-badge)](LICENSE)
 
